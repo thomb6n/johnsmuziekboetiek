@@ -1,0 +1,21 @@
+@mixin medium {
+	// 640 px
+	@media (min-width: 40rem) {
+		@content;
+	}
+}
+
+@mixin large {
+	// 1024 px
+	@media (min-width: 64rem) {
+		@content;
+	}
+}
+
+@mixin xlarge {
+	// 1440 px
+	@media (min-width: 90rem) {
+		@content;
+	}
+}
+

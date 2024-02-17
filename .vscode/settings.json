@@ -1,0 +1,26 @@
+{
+	"phpcbf.enable": true,
+	"phpcbf.standard": "WordPress-Core",
+	"phpcbf.executablePath": "./vendor/squizlabs/php_codesniffer/bin/phpcbf",
+	"phpcs.enable": true,
+	"phpcbf.onsave": false,
+	"phpcs.composerJsonPath": "composer.json",
+	"phpcs.standard": "WordPress-Core",
+	"editor.insertSpaces": false,
+	"editor.tabSize": 2,
+	"workbench.startupEditor": "none",
+	"editor.lineHeight": 2,
+	"editor.fontFamily": "JetBrains Mono",
+	"editor.suggest.showKeywords": false,
+	"phpcs.ignorePatterns": ["**/vendor/**", "**/stubs/**"],
+	"intelephense.files.exclude": [
+		"**/.git/**",
+		"**/.DS_Store/**",
+		"**/node_modules/**",
+		"**/vendor/**/{Tests,tests}/**",
+		"**/vendor/**/vendor/**"
+	],
+	"[php]": {
+		"editor.defaultFormatter": "persoderlind.vscode-phpcbf"
+	}
+}

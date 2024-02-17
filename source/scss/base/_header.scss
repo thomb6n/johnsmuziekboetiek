@@ -1,0 +1,12 @@
+.site-header-wrapper {
+	margin-block: 1rem;
+	padding-inline: $padding-inline;
+	top: 1rem;
+	width: 100%;
+	z-index: $z-index-high;
+
+	.site-header {
+		padding-block: 0.75rem;
+		padding-inline: $padding-inline;
+	}
+}

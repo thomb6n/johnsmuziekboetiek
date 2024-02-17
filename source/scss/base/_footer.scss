@@ -1,0 +1,41 @@
+#site-footer {
+	.footer-columns {
+		padding-top: $spacing-block;
+		padding-inline: $padding-inline;
+
+		.footer-columns-container {
+			display: grid;
+			gap: 1rem;
+			grid-template-columns: 1fr;
+
+			@include medium {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			@include large {
+				grid-template-columns: repeat(4, 1fr);
+			}
+
+			.footer-column {
+				.menu {
+					list-style: none;
+					margin: 0;
+					padding: 0;
+				}
+			}
+		}
+	}
+
+	.copyright-wrapper {
+		.copyright {
+			margin-top: 2rem;
+			padding-block: 1.25rem;
+			padding-inline: $padding-inline;
+
+			p {
+				color: $color-black;
+				margin: 0;
+			}
+		}
+	}
+}

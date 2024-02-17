@@ -1,0 +1,17 @@
+{
+	"scripts": {
+		"dev": "webpack --watch"
+	},
+	"devDependencies": {
+		"css-loader": "^6.10.0",
+		"node-sass-glob-importer": "^5.3.3",
+		"sass": "^1.70.0",
+		"sass-loader": "^14.1.0",
+		"style-loader": "^3.3.4",
+		"webpack": "^5.90.1",
+		"webpack-cli": "^5.1.4"
+	},
+	"dependencies": {
+		"swiper": "^11.0.6"
+	}
+}
