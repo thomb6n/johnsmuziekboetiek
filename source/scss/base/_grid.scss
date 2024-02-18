@@ -3,10 +3,6 @@ section {
 	padding-inline: $padding-inline;
 	position: relative;
 
-	@include large {
-		margin-block: $spacing-block-lg;
-	}
-
 	&.has-background {
 		margin-block: 0;
 		padding-block: $spacing-block;
@@ -20,9 +16,4 @@ section {
 .container {
 	margin-inline: auto;
 	max-width: $container-max-width;
-}
-
-.container-large {
-	margin-inline: auto;
-	max-width: $container-large-max-width;
 }

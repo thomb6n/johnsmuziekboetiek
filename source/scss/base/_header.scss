@@ -1,12 +1,87 @@
+.top-bar {
+	.top-bar-content {
+		padding-block: 10px;
+		padding-inline: $padding-inline;
+
+		p,
+		a {
+			font-size: $font-size-body-small;
+			font-weight: 700;
+			margin: 0;
+		}
+	}
+}
+
 .site-header-wrapper {
-	margin-block: 1rem;
+	background-color: $color-primary;
+	color: $color-white;
 	padding-inline: $padding-inline;
 	top: 1rem;
 	width: 100%;
 	z-index: $z-index-high;
 
 	.site-header {
-		padding-block: 0.75rem;
+		padding-block: 1rem;
 		padding-inline: $padding-inline;
+
+		.header-wrapper {
+			align-items: center;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		#menu-toggle {
+			display: block;
+
+			@include medium {
+				display: none;
+			}
+		}
+
+		#primary-menu {
+			align-items: center;
+			display: none;
+			gap: 1.5rem;
+
+			@include medium {
+				display: flex;
+			}
+
+			.woocommerce-icons {
+				align-items: center;
+				display: flex;
+				gap: 1rem;
+
+				a {
+					i {
+						color: $color-white;
+					}
+				}
+			}
+
+			.menu {
+				align-items: center;
+				display: flex;
+				gap: 1.5rem;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+
+				.menu-item {
+					a {
+						color: $color-white;
+					}
+				}
+			}
+		}
+
+		.site-branding {
+			#logo {
+				color: $color-white;
+				font-family: $font-family-heading;
+				font-size: $font-size-x-large;
+				font-weight: 700;
+			}
+		}
 	}
 }

@@ -1,0 +1,52 @@
+.categories {
+	.categories-wrapper {
+		display: grid;
+		gap: 1.25rem;
+		grid-template-columns: repeat(2, 1fr);
+
+		@include medium {
+			grid-template-columns: repeat(4, 1fr);
+		}
+
+		.category-card {
+			aspect-ratio: 1/1;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			border-radius: $border-radius;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			overflow: hidden;
+			padding: 1rem;
+			position: relative;
+			text-align: center;
+
+			@include large {
+				aspect-ratio: 28/23;
+				padding: 2rem;
+			}
+
+			&::before {
+				background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 45%, rgba(0, 0, 0, 0) 100%);
+				content: "";
+				inset: 0;
+				position: absolute;
+			}
+
+			.card-content {
+				position: relative;
+			}
+
+			.category-title,
+			.product-count {
+				color: $color-white;
+				margin: 0;
+			}
+
+			.product-count {
+				margin-top: 4px;
+			}
+		}
+	}
+}

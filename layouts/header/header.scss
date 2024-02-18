@@ -1,0 +1,32 @@
+.header {
+	background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+	position: relative;
+
+	&::before {
+		background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 45%, rgba(0, 0, 0, 0) 100%);
+		content: "";
+		inset: 0;
+		position: absolute;
+	}
+
+	.content {
+		padding-block: 4rem;
+		position: relative;
+	}
+
+	.title {
+		color: $color-white;
+		max-width: 580px;
+	}
+
+	#header-search {
+		margin-top: 1rem;
+
+		input {
+			max-width: 500px;
+			width: 100%;
+		}
+	}
+}

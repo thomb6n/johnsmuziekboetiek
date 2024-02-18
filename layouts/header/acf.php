@@ -17,10 +17,10 @@ $layouts[ $layout_name ] = array(
 			'required'     => 1,
 		),
 		array(
-			'key'   => 'field_' . $layout_name . '_pretitle',
-			'label' => __( 'Pretitle', 'toms' ),
-			'name'  => $layout_name . '_pretitle',
-			'type'  => 'text',
+			'key'   => 'field_' . $layout_name . '_background',
+			'label' => __( 'Background', 'toms' ),
+			'name'  => $layout_name . '_background',
+			'type'  => 'image',
 		),
 	),
 );

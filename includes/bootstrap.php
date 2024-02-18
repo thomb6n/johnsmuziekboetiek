@@ -43,7 +43,7 @@ function tom_register_sidebars() {
 				'name'          => __( 'Footer', 'toms' ) . ' ' . $i,
 				'before_widget' => '<div id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</div>',
-				'before_title'  => '<span class="widget-title h5">',
+				'before_title'  => '<span class="widget-title">',
 				'after_title'   => '</span>',
 			)
 		);

@@ -4,7 +4,7 @@
 		<?php _e( 'Site footer', 'toms' ); ?>
 	</h2>
 	<div class="footer-columns">
-		<div class="container-large">
+		<div class="container">
 			<div class="footer-columns-container widgets">
 				<div class="footer-column">
 					<?php dynamic_sidebar( 'footer-1' ); ?>
@@ -24,8 +24,8 @@
 
 
 	<div class="copyright-wrapper">
-		<div class="copyright">
-			<div class="container-large">
+		<div class="container">
+			<div class="copyright">
 				<?php dynamic_sidebar( 'copyright' ); ?>
 			</div>
 		</div>
