@@ -18,7 +18,7 @@
 get_header( 'shop' );
 
 ?>
-<section class="header has-background">
+<section class="header has-background" style="background-image: url('<?php echo IMAGEPATH . 'johns-header.jpg'; ?>')">
 	<div class="container">
 		<div class="content">
 			<h1 class="title"><?php woocommerce_page_title(); ?></h1>
@@ -28,7 +28,9 @@ get_header( 'shop' );
 
 <section class="products-overview container">
 	<aside class="filtering">
-		<h2>Filters</h2>
+		<h2><?php _e( 'Filters', 'toms' ); ?></h2>
+		<?php echo facetwp_display( 'facet', 'search' ); ?>
+		<?php echo facetwp_display( 'facet', 'product_cat' ); ?>
 	</aside>
 
 	<div class="products-grid">
@@ -48,7 +50,11 @@ get_header( 'shop' );
 			do_action( 'woocommerce_no_products_found' );
 		}
 		?>
+		<nav class="woocommerce-facet-pagination">
+			<?php echo facetwp_display( 'facet', 'pagination' ); ?>
+		</nav>
 	</div>
+
 </section>
 <?php
 

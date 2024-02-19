@@ -8,6 +8,10 @@ require 'includes/helpers.php';
 require 'includes/cpts.php';
 require 'includes/taxonomies.php';
 
+if ( class_exists( 'FacetWP' ) ) {
+	require 'includes/facets.php';
+}
+
 if ( class_exists( 'acf' ) ) {
-	include 'includes/acf.php';
+	require 'includes/acf.php';
 }
