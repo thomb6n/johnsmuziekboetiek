@@ -1,0 +1,20 @@
+.woocommerce {
+	.products-overview {
+		.products-grid {
+			.products {
+				.product {
+					clear: unset;
+					float: unset;
+					margin: 0;
+					width: auto;
+
+					.attachment-woocommerce_thumbnail {
+						aspect-ratio: 1/1;
+						object-fit: cover;
+						object-position: center;
+					}
+				}
+			}
+		}
+	}
+}

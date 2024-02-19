@@ -2,7 +2,6 @@
 	.categories-wrapper {
 		display: grid;
 		gap: 1.25rem;
-		grid-template-columns: repeat(2, 1fr);
 
 		@include medium {
 			grid-template-columns: repeat(4, 1fr);
