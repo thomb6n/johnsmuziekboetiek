@@ -4,7 +4,7 @@ $prefix      = $layout_name . '_';
 $title       = get_sub_field( $prefix . 'title' );
 $background  = get_sub_field( $prefix . 'background' );
 ?>
-<section class="header" <?php echo $background ? 'style="background-image: url(' . $background['sizes']['large'] . ')"' : ''; ?>>
+<section class="header <?php echo $background ? 'has-background' : ''; ?>" <?php echo $background ? 'style="background-image: url(' . $background['sizes']['large'] . ')"' : ''; ?>>
 	<div class="container">
 		<div class="content">
 			<?php
