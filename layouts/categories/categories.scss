@@ -22,6 +22,18 @@
 			position: relative;
 			text-align: center;
 
+			@include medium {
+				&:hover {
+					.category-title {
+						transform: translateY(0);
+					}
+
+					.product-count {
+						opacity: 1;
+					}
+				}
+			}
+
 			@include large {
 				aspect-ratio: 28/23;
 				padding: 2rem;
@@ -42,10 +54,21 @@
 			.product-count {
 				color: $color-white;
 				margin: 0;
+				transition: opacity $transition, transform $transition;
+			}
+
+			.category-title {
+				@include medium {
+					transform: translateY(1.75rem);
+				}
 			}
 
 			.product-count {
 				margin-top: 4px;
+
+				@include medium {
+					opacity: 0;
+				}
 			}
 		}
 	}

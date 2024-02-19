@@ -25,12 +25,14 @@ $categories  = get_sub_field( $prefix . 'categories' );
 					if ( $cat_thumbnail_id ) {
 						$cat_image = wp_get_attachment_url( $cat_thumbnail_id );
 					}
+					$cat_url = get_term_link( $cat );
 					?>
 					<div class="category-card" <?php echo $cat_image ? 'style="background-image: url(' . $cat_image . ')"' : ''; ?>>
 						<div class="card-content">
 							<h3 class="category-title"><?php echo $cat_title; ?></h3>
 							<p class="product-count"><?php echo $cat_count . ' ' . __( 'products', 'toms' ); ?></p>
 						</div>
+						<a href="<?php echo $cat_url; ?>" class="overlay-link"></a>
 					</div>
 					<?php
 				}
