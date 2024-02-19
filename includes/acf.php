@@ -36,6 +36,60 @@ if ( function_exists( 'acf_add_local_field_group' ) ) {
 				),
 			),
 		);
+
+		acf_add_local_field_group(
+			array(
+				'key'                   => 'group_review_fields',
+				'title'                 => 'Review Fields',
+				'fields'                => array(
+					array(
+						'key'      => 'field_review_stars',
+						'label'    => __( 'Review Stars', 'toms' ),
+						'name'     => 'review-stars',
+						'type'     => 'number',
+						'required' => 1,
+						'min'      => 1,
+						'max'      => 5,
+					),
+					array(
+						'key'      => 'field_review_text',
+						'label'    => __( 'Review Text', 'toms' ),
+						'name'     => 'review-text',
+						'type'     => 'text',
+						'required' => 1,
+					),
+					array(
+						'key'      => 'field_review_author',
+						'label'    => __( 'Review Author', 'toms' ),
+						'name'     => 'review-author',
+						'type'     => 'text',
+						'required' => 1,
+					),
+					array(
+						'key'   => 'field_review_source',
+						'label' => __( 'Review Source', 'toms' ),
+						'name'  => 'review-source',
+						'type'  => 'url',
+					),
+				),
+				'location'              => array(
+					array(
+						array(
+							'param'    => 'post_type',
+							'operator' => '==',
+							'value'    => 'review',
+						),
+					),
+				),
+				'position'              => 'acf_after_title',
+				'label_placement'       => 'top',
+				'instruction_placement' => 'label',
+				'active'                => true,
+				'hide_on_screen'        => array(
+					0 => 'the_content',
+				),
+			),
+		);
 	}
 	add_action( 'acf/include_fields', 'toms_add_acf_layouts' );
 }

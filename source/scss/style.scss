@@ -1,6 +1,11 @@
 @charset "utf-8";
 
 @import "base/normalize";
+
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/autoplay';
+
 @import "base/theme";
 @import "base/typography";
 @import "base/mixins";
