@@ -1,7 +1,8 @@
 .top-bar {
+	padding-inline: $padding-inline;
+
 	.top-bar-content {
 		padding-block: 10px;
-		padding-inline: $padding-inline;
 
 		p,
 		a {
@@ -22,7 +23,6 @@
 
 	.site-header {
 		padding-block: 1rem;
-		padding-inline: $padding-inline;
 
 		.header-wrapper {
 			align-items: center;

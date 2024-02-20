@@ -14,7 +14,8 @@ if ( 'handpicked' === $query ) {
 	$category = get_sub_field( $prefix . 'category' );
 	$products = wc_get_products(
 		array(
-			'category' => $category,
+			'product_category_id' => array( $category ),
+			'limit'               => 6,
 		)
 	);
 } else {
@@ -45,21 +46,7 @@ if ( 'handpicked' === $query ) {
 			<div class="products">
 				<?php
 				foreach ( $products as $product ) {
-					if ( ! $product instanceof WC_Product ) {
-						$product = wc_get_product( $product );
-					}
-
-					$image = $product->get_image_id();
-					$image = wp_get_attachment_image_url( $image, 'small' );
-					$url   = $product->get_permalink();
-					?>
-					<div class="product">
-						<img src="<?php echo $image; ?>" alt="">
-						<h3 class="title"><?php echo $product->get_title(); ?></h3>
-						<p class="price"><?php echo $product->get_price_html(); ?></p>
-						<a href="<?php echo $url; ?>" class="overlay-link"></a>
-					</div>
-					<?php
+					get_template_part( 'template-parts/grid-card', 'product', array( 'product' => $product ) );
 				}
 				?>
 			</div>

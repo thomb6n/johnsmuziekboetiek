@@ -13,6 +13,12 @@
 						object-fit: cover;
 						object-position: center;
 					}
+
+					.woocommerce-loop-product__title {
+						overflow: hidden;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+					}
 				}
 			}
 		}

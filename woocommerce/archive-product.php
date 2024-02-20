@@ -41,7 +41,7 @@ get_header( 'shop' );
 			if ( wc_get_loop_prop( 'total' ) ) {
 				while ( have_posts() ) {
 					the_post();
-					wc_get_template_part( 'content', 'product' );
+					get_template_part( 'template-parts/grid-card', 'product' );
 				}
 			}
 

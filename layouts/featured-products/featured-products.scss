@@ -1,49 +1,24 @@
 .featured-products {
-	.title {
+	h2.title {
 		margin-bottom: 0.5rem;
 	}
 
 	.subtitle {
-		margin-bottom: 2rem;
+		margin-block: 0 2rem;
 	}
 
 	.products {
 		display: grid;
 		gap: 1rem;
-		grid-template-columns: repeat(6, minmax(0, 1fr));
+		grid-template-columns: repeat(2, minmax(0, 1fr));
 		margin-top: 2rem;
 
-		.product {
-			position: relative;
+		@include medium {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
 
-			&:hover {
-				cursor: pointer;
-
-				.title {
-					text-decoration: underline;
-				}
-			}
-
-			img {
-				aspect-ratio: 1/1;
-				object-fit: cover;
-				margin-bottom: 0.5rem;
-				width: 100%;
-			}
-
-			.title {
-				margin-bottom: 0.25rem;
-				overflow: hidden;
-				text-overflow: ellipsis;
-				white-space: nowrap;
-			}
-
-			.price {
-				color: $color-primary;
-				font-family: $font-family-heading;
-				font-size: 0.875rem;
-				margin: 0;
-			}
+		@include large {
+			grid-template-columns: repeat(6, minmax(0, 1fr));
 		}
 	}
 }

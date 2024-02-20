@@ -1,0 +1,33 @@
+.grid-card-product {
+	position: relative;
+
+	&:hover {
+		cursor: pointer;
+
+		.title {
+			text-decoration: underline;
+		}
+	}
+
+	img {
+		aspect-ratio: 1/1;
+		object-fit: cover;
+		margin-bottom: 0.5rem;
+		width: 100%;
+	}
+
+	> .title {
+		font-size: 1rem;
+		margin-bottom: 0.25rem;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.price {
+		color: $color-primary;
+		font-family: $font-family-heading;
+		font-size: 0.875rem;
+		margin: 0;
+	}
+}

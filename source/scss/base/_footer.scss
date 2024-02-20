@@ -15,7 +15,6 @@
 			gap: 1rem;
 			grid-template-columns: 1fr;
 			padding-block: 64px;
-			padding-inline: $padding-inline;
 
 			@include medium {
 				grid-template-columns: repeat(2, 1fr);
@@ -44,9 +43,10 @@
 	}
 
 	.copyright-wrapper {
+		padding-inline: $padding-inline;
+
 		.copyright {
 			padding-block: 1rem;
-			padding-inline: $padding-inline;
 
 			p {
 				color: $color-black;
