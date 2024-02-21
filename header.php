@@ -14,10 +14,10 @@
 		<div class="container">
 			<div class="top-bar-content">
 				<div class="top-bar-left">
-					<?php dynamic_sidebar( 'top-bar-left' ); ?>
+					<?php dynamic_sidebar( 'topbar-left' ); ?>
 				</div>
 				<div class="top-bar-right">
-					<?php dynamic_sidebar( 'top-bar-right' ); ?>
+					<?php dynamic_sidebar( 'topbar-right' ); ?>
 				</div>
 			</div>
 		</div>

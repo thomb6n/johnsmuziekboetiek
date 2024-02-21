@@ -1,0 +1,239 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: John's Muziekboetiek\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-21 16:50+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.6; wp-6.4.3\n"
+"X-Domain: toms"
+
+#: header.php:44
+msgid "Account"
+msgstr ""
+
+#: includes/helpers.php:37 includes/helpers.php:38
+msgid "Add New"
+msgstr ""
+
+#: includes/acf.php:18
+msgid "Add new layout"
+msgstr ""
+
+#: includes/helpers.php:36
+msgid "All"
+msgstr ""
+
+#. Author of the theme
+msgid "Anonymous"
+msgstr ""
+
+#: includes/helpers.php:34
+msgid "Archives"
+msgstr ""
+
+#: includes/helpers.php:35
+msgid "Attributes"
+msgstr ""
+
+#: layouts/header/acf.php:21
+msgid "Background"
+msgstr ""
+
+#: header.php:50
+msgid "Cart"
+msgstr ""
+
+#: layouts/categories/acf.php:8 layouts/categories/acf.php:20
+msgid "Categories"
+msgstr ""
+
+#: layouts/featured-products/acf.php:32 layouts/featured-products/acf.php:61
+msgid "Category"
+msgstr ""
+
+#: layouts/text-column/acf.php:13
+msgid "Content"
+msgstr ""
+
+#: includes/bootstrap.php:56
+msgid "Copyright"
+msgstr ""
+
+#: includes/helpers.php:39
+msgid "Edit"
+msgstr ""
+
+#: layouts/featured-products/acf.php:8
+msgid "Featured Products"
+msgstr ""
+
+#: woocommerce/archive-product.php:31 woocommerce/archive-product.php:34
+#: woocommerce/archive-product.php:63
+msgid "Filters"
+msgstr ""
+
+#: includes/bootstrap.php:44
+msgid "Footer"
+msgstr ""
+
+#: includes/helpers.php:43
+msgid "found"
+msgstr ""
+
+#: includes/helpers.php:44
+msgid "found in Trash"
+msgstr ""
+
+#: layouts/featured-products/acf.php:31
+msgid "Handpicked"
+msgstr ""
+
+#: layouts/header/acf.php:8
+msgid "Header"
+msgstr ""
+
+#. Name of the theme
+msgid "John's Muziekboetiek"
+msgstr ""
+
+#: layouts/featured-products/acf.php:30
+msgid "Latest"
+msgstr ""
+
+#: includes/acf.php:14
+msgid "Layouts"
+msgstr ""
+
+#: header.php:59
+msgid "Menu"
+msgstr ""
+
+#: layouts/reviews/acf.php:13
+msgid "Message"
+msgstr ""
+
+#: includes/helpers.php:40
+msgid "New"
+msgstr ""
+
+#: includes/helpers.php:43 includes/helpers.php:44
+msgid "No"
+msgstr ""
+
+#: woocommerce/archive-product.php:99
+msgid "Other categories of"
+msgstr ""
+
+#: includes/facets.php:14
+msgid "Pagination"
+msgstr ""
+
+#: woocommerce/archive-product.php:84
+msgid "Popular categories"
+msgstr ""
+
+#: includes/bootstrap.php:21
+msgid "Primary Menu"
+msgstr ""
+
+#: layouts/featured-products/acf.php:37
+msgid "Products"
+msgstr ""
+
+#: layouts/categories/categories.php:38
+msgid "products"
+msgstr ""
+
+#: layouts/featured-products/acf.php:26
+msgid "Query"
+msgstr ""
+
+#: woocommerce/archive-product.php:77
+msgid "Related categories"
+msgstr ""
+
+#: includes/acf.php:63
+msgid "Review Author"
+msgstr ""
+
+#: includes/acf.php:70
+msgid "Review Source"
+msgstr ""
+
+#: includes/acf.php:47
+msgid "Review Stars"
+msgstr ""
+
+#: includes/acf.php:56
+msgid "Review Text"
+msgstr ""
+
+#: layouts/reviews/acf.php:8
+msgid "Reviews"
+msgstr ""
+
+#: includes/facets.php:6 includes/helpers.php:42
+msgid "Search"
+msgstr ""
+
+#: includes/facets.php:8
+msgid "Search..."
+msgstr ""
+
+#: includes/bootstrap.php:22
+msgid "Secondary Menu"
+msgstr ""
+
+#: woocommerce/archive-product.php:68 woocommerce/archive-product.php:69
+msgid "Show results"
+msgstr ""
+
+#: footer.php:4
+msgid "Site footer"
+msgstr ""
+
+#: layouts/featured-products/acf.php:20
+msgid "Subtitle"
+msgstr ""
+
+#: layouts/text-column/acf.php:8
+msgid "Text Column"
+msgstr ""
+
+#: layouts/header/acf.php:16
+msgid "This is the H1 of the page, it can only be used once per page."
+msgstr ""
+
+#: layouts/reviews/acf.php:16
+msgid "This is the reviews layout. It will show all the published reviews."
+msgstr ""
+
+#: layouts/featured-products/acf.php:13 layouts/categories/acf.php:13
+#: layouts/header/acf.php:13
+msgid "Title"
+msgstr ""
+
+#: includes/bootstrap.php:67
+msgid "Top Bar Left"
+msgstr ""
+
+#: includes/bootstrap.php:78
+msgid "Top Bar Right"
+msgstr ""
+
+#: includes/helpers.php:41
+msgid "View"
+msgstr ""
+
+#: layouts/header/header.php:19
+msgid "What are you looking for?"
+msgstr ""
