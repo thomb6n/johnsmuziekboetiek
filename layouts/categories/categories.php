@@ -1,8 +1,8 @@
 <?php
 $layout_name = basename( __FILE__, '.php' );
 $prefix      = $layout_name . '_';
-$title       = get_sub_field( $prefix . 'title' );
-$categories  = get_sub_field( $prefix . 'categories' );
+$title       = ! empty( $args['title'] ) ? $args['title'] : get_sub_field( $prefix . 'title' );
+$categories  = ! empty( $args['categories'] ) ? $args['categories'] : get_sub_field( $prefix . 'categories' );
 ?>
 <section class="categories">
 	<div class="container">
@@ -19,9 +19,14 @@ $categories  = get_sub_field( $prefix . 'categories' );
 				<div class="categories-wrapper">
 				<?php
 				foreach ( $categories as $cat ) {
+					if ( ! is_int( $cat ) ) {
+						$cat = $cat->term_id;
+					}
+
 					$cat_title        = get_term_field( 'name', $cat );
 					$cat_count        = get_term_field( 'count', $cat );
 					$cat_thumbnail_id = get_term_meta( $cat, 'thumbnail_id', true );
+					$cat_image        = false;
 					if ( $cat_thumbnail_id ) {
 						$cat_image = wp_get_attachment_url( $cat_thumbnail_id );
 					}

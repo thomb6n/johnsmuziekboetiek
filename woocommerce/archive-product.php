@@ -51,10 +51,10 @@ get_header( 'shop' );
 			do_action( 'woocommerce_no_products_found' );
 		}
 		?>
+
 		<nav class="woocommerce-facet-pagination">
 			<?php echo facetwp_display( 'facet', 'pagination' ); ?>
 		</nav>
-
 	</div>
 
 	<div class="offcanvas offcanvas-filters closed" data-toggler="offcanvas-filters" style="display: none;">
@@ -72,6 +72,36 @@ get_header( 'shop' );
 	</div>
 
 </section>
-<?php
 
+<?php
+$category   = get_term_by( 'slug', get_query_var( 'product_cat' ), 'product_cat' );
+$categories = woocommerce_get_product_subcategories( $category->term_id );
+$title      = __( 'Related categories', 'toms' );
+if ( empty( $categories ) ) {
+	$parent_category = get_term( $category->parent, 'product_cat' );
+	$categories      = woocommerce_get_product_subcategories( $parent_category->term_id );
+	$title           = __( 'Other categories of', 'toms' ) . ' ' . $parent_category->name;
+}
+$random_keys       = array_rand( $categories, 4 );
+$random_categories = array();
+
+foreach ( $random_keys as $key ) {
+	// If the category is the same as the current category, or if the category is already in the array, take the next key
+	if ( $category->term_id === $categories[ $key ]->term_id || in_array( $categories[ $key ], $random_categories, true ) ) {
+		$key++;
+	}
+	$random_categories[] = $categories[ $key ];
+}
+
+get_template_part(
+	'layouts/categories/categories',
+	'',
+	array(
+		'categories' => $random_categories,
+		'title'      => $title,
+	)
+)
+?>
+
+<?php
 get_footer( 'shop' );
