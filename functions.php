@@ -9,6 +9,7 @@ require 'includes/cpts.php';
 require 'includes/taxonomies.php';
 
 if ( class_exists( 'FacetWP' ) ) {
+	require 'includes/facet-wp.php';
 	require 'includes/facets.php';
 }
 

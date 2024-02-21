@@ -1,0 +1,64 @@
+.facetwp-facet {
+	.facetwp-depth {
+		margin-left: 1.5rem;
+	}
+
+	.facetwp-checkbox {
+		background: unset;
+		margin-bottom: 8px;
+		padding-left: unset;
+		position: relative;
+
+		&::before {
+			content: "\f0c8";
+			font-family: $icons;
+			inset: 0 auto 0 0;
+			position: absolute;
+		}
+
+		&.checked {
+			background: unset;
+
+			&::before {
+				content: "\f14a";
+			}
+		}
+
+		.facetwp-display-value,
+		.facetwp-counter {
+			font-family: $font-family-body;
+		}
+
+		.facetwp-display-value {
+			font-size: 1rem;
+			padding-left: 1.5rem;
+		}
+
+		.facetwp-counter {
+			color: $color-primary;
+		}
+
+		.facetwp-toggle {
+			position: relative;
+
+			&::before {
+				font-family: $icons;
+				font-size: 0.875rem;
+				position: absolute;
+				right: 0;
+			}
+
+			&.expand {
+				&::before {
+					content: "\2b";
+				}
+			}
+
+			&.collapse {
+				&::before {
+					content: "\f068";
+				}
+			}
+		}
+	}
+}
