@@ -2,8 +2,8 @@
 
 toms_register_post_type(
 	'review',
-	'Review',
-	'Reviews',
+	__( 'Review', 'toms' ),
+	__( 'Reviews', 'toms' ),
 	array(
 		'menu_icon' => 'dashicons-smiley',
 		'supports'  => array( 'title' ),

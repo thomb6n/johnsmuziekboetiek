@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: John's Muziekboetiek\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-21 16:50+0000\n"
+"POT-Creation-Date: 2024-02-21 17:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -30,10 +30,6 @@ msgstr ""
 
 #: includes/helpers.php:36
 msgid "All"
-msgstr ""
-
-#. Author of the theme
-msgid "Anonymous"
 msgstr ""
 
 #: includes/helpers.php:34
@@ -161,6 +157,10 @@ msgstr ""
 msgid "Related categories"
 msgstr ""
 
+#: includes/cpts.php:5
+msgid "Review"
+msgstr ""
+
 #: includes/acf.php:63
 msgid "Review Author"
 msgstr ""
@@ -177,7 +177,7 @@ msgstr ""
 msgid "Review Text"
 msgstr ""
 
-#: layouts/reviews/acf.php:8
+#: includes/cpts.php:6 layouts/reviews/acf.php:8
 msgid "Reviews"
 msgstr ""
 
@@ -220,6 +220,10 @@ msgstr ""
 #: layouts/featured-products/acf.php:13 layouts/categories/acf.php:13
 #: layouts/header/acf.php:13
 msgid "Title"
+msgstr ""
+
+#. Author of the theme
+msgid "Tom de Visser"
 msgstr ""
 
 #: includes/bootstrap.php:67
