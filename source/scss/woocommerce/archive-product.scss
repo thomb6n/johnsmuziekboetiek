@@ -65,11 +65,17 @@
 		align-items: center;
 		display: flex;
 		justify-content: space-between;
+		margin-bottom: 1rem;
 
 		.filters-close {
 			background: unset;
 			border: 0;
+			font-size: 1.5rem;
 			padding-right: 0;
+		}
+
+		h2 {
+			margin-bottom: 0;
 		}
 	}
 

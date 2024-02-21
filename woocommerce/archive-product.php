@@ -60,7 +60,7 @@ get_header( 'shop' );
 	<div class="offcanvas offcanvas-filters closed" data-toggler="offcanvas-filters" style="display: none;">
 		<div class="inner">
 			<div class="top">
-				<h2 class="h4"><?php _e( 'Filters', 'toms' ); ?></h2>
+				<h2><?php _e( 'Filters', 'toms' ); ?></h2>
 				<button class="filters-close toggle-offcanvas" data-toggle="offcanvas-filters"><i class="fa-regular fa-xmark"></i></button>
 			</div>
 			<?php echo facetwp_display( 'facet', 'search' ); ?>
@@ -117,7 +117,13 @@ get_template_part(
 		'categories' => $random_categories,
 		'title'      => $title,
 	)
-)
+);
+
+get_template_part( 'layouts/reviews/reviews' );
+
+if ( $category && ! empty( $category->description ) ) {
+	get_template_part( 'layouts/text-column/text-column', '', array( 'content' => apply_filters( 'the_content', $category->description ) ) );
+}
 ?>
 
 <?php
