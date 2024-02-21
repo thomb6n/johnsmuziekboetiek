@@ -40,4 +40,6 @@ while ( have_posts() ) {
  */
 // do_action( 'woocommerce_after_main_content' );
 
+get_template_part( 'layouts/reviews/reviews' );
+
 get_footer( 'shop' );

@@ -25,9 +25,12 @@
 	}
 
 	.price {
-		color: $color-primary;
 		font-family: $font-family-heading;
 		font-size: 0.875rem;
 		margin: 0;
+
+		.amount {
+			color: $color-primary;
+		}
 	}
 }

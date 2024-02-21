@@ -4,12 +4,12 @@ use function PHPSTORM_META\type;
 
 $layout_name = basename( __FILE__, '.php' );
 $prefix      = $layout_name . '_';
-$title       = get_sub_field( $prefix . 'title' );
-$subtitle    = get_sub_field( $prefix . 'subtitle' );
-$query       = get_sub_field( $prefix . 'query' );
+$title       = ! empty( $args['title'] ) ? $args['title'] : get_sub_field( $prefix . 'title' );
+$subtitle    = ! empty( $args['subtitle'] ) ? $args['subtitle'] : get_sub_field( $prefix . 'subtitle' );
+$query       = ! empty( $args['query'] ) ? $args['query'] : get_sub_field( $prefix . 'query' );
 
 if ( 'handpicked' === $query ) {
-	$products = get_sub_field( $prefix . 'choice' );
+	$products = ! empty( $args['products'] ) ? $args['products'] : get_sub_field( $prefix . 'choice' );
 } elseif ( 'category' === $query ) {
 	$category = get_sub_field( $prefix . 'category' );
 	$products = wc_get_products(
@@ -18,7 +18,7 @@ if ( 'handpicked' === $query ) {
 			'limit'               => 6,
 		)
 	);
-} else {
+} elseif ( 'latest' === $query ) {
 	$products = wc_get_products(
 		array(
 			'limit' => 6,

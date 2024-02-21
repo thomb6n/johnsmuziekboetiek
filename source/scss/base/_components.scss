@@ -7,6 +7,16 @@ a {
 	}
 }
 
+.button {
+	background-color: $color-secondary;
+	border: 1px solid $color-secondary;
+	border-radius: $border-radius;
+	color: $color-white;
+	font-family: $font-family-body;
+	padding: 1rem 1.5rem;
+	width: fit-content;
+}
+
 input {
 	background-color: white;
 	border: 1px solid rgba($color-black, 0.2);
