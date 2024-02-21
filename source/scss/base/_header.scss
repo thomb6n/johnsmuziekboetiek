@@ -1,5 +1,9 @@
 .top-bar {
+	background-color: $color-white;
 	padding-inline: $padding-inline;
+	position: sticky;
+	top: 0;
+	z-index: $z-index-high;
 
 	.top-bar-content {
 		padding-block: 10px;
@@ -17,7 +21,8 @@
 	background-color: $color-primary;
 	color: $color-white;
 	padding-inline: $padding-inline;
-	top: 1rem;
+	position: sticky;
+	top: 41px;
 	width: 100%;
 	z-index: $z-index-high;
 
@@ -55,6 +60,16 @@
 
 			.close-icon {
 				display: none;
+			}
+
+			&.toggle-open {
+				.close-icon {
+					display: flex;
+				}
+
+				.open-icon {
+					display: none;
+				}
 			}
 		}
 
@@ -119,8 +134,9 @@ body {
 .offcanvas {
 	background-color: $color-primary;
 	display: block;
-	height: calc(100vh - 108px);
+	height: calc(100% - 108px);
 	left: 0;
+	overflow: scroll;
 	padding: 2rem $padding-inline;
 	pointer-events: none;
 	position: fixed;
@@ -128,7 +144,11 @@ body {
 	transform: translateX(100%);
 	transition: transform $transition;
 	width: 100%;
-	z-index: 99;
+	z-index: $z-index-high;
+
+	&#offcanvas-main {
+		z-index: calc($z-index-high + 1);
+	}
 
 	&.opened {
 		pointer-events: all;

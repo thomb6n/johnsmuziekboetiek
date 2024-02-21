@@ -52,7 +52,7 @@
 							</a>
 						</div>
 
-						<button class="toggle-offcanvas" id="menu-toggle" type="button" aria-label="Toggle the navigation" data-toggle="closed">
+						<button id="menu-toggle" class="toggle-offcanvas" type="button" aria-label="Toggle the navigation" data-toggle="menu-toggle">
 							<i class="fa-regular fa-bars open-icon"></i>
 							<i class="fa-regular fa-times close-icon"></i>
 							<span class="screen-reader-text">

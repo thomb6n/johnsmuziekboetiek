@@ -1,6 +1,64 @@
 .facetwp-facet {
 	.facetwp-depth {
+		flex-direction: inherit;
 		margin-left: 1.5rem;
+	}
+
+	.facetwp-pager {
+		display: flex;
+		gap: 0.25rem;
+
+		.facetwp-page {
+			align-items: center;
+			border: 1px solid $color-secondary;
+			display: flex;
+			height: 2.5rem;
+			justify-content: center;
+			transition: background-color $transition;
+			padding: 1rem;
+			width: 2.5rem;
+
+			&:hover {
+				background-color: rgba($color-secondary, 0.1);
+			}
+
+			&.dots {
+				&:hover {
+					background-color: transparent;
+					text-decoration: none;
+				}
+			}
+
+			&.active {
+				background-color: $color-secondary;
+				color: $color-white;
+			}
+		}
+	}
+
+	&.facetwp-type-search {
+		.facetwp-input-wrap {
+			.facetwp-search {
+				width: 100%;
+			}
+
+			.facetwp-icon {
+				bottom: 0;
+				height: unset;
+				line-height: unset;
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+
+				&::before {
+					background: unset;
+					content: "\f002";
+					font-family: $icons;
+					font-style: normal;
+				}
+			}
+		}
 	}
 
 	.facetwp-checkbox {
@@ -27,6 +85,7 @@
 		.facetwp-display-value,
 		.facetwp-counter {
 			font-family: $font-family-body;
+			line-height: 1;
 		}
 
 		.facetwp-display-value {
