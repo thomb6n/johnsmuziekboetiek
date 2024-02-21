@@ -101,6 +101,10 @@
 				font-family: $font-family-heading;
 				font-size: $font-size-x-large;
 				font-weight: 700;
+
+				&:hover {
+					text-decoration: none;
+				}
 			}
 		}
 	}
