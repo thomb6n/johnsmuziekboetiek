@@ -23,14 +23,18 @@ a {
 	}
 }
 
-input {
+input,
+textarea {
 	background-color: white;
 	border: 1px solid rgba($color-black, 0.2);
 	border-radius: $border-radius;
-	padding: 0.5rem 1rem;
+	line-height: 1.5;
+	padding: 0.75rem 1.15rem;
 
 	&::placeholder {
 		color: rgba($color-black, 0.8);
+		font-family: $font-family-body;
+		line-height: 1.5;
 	}
 
 	&:focus {

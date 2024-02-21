@@ -1,0 +1,21 @@
+.woocommerce-cart-wrapper {
+	padding-inline: $padding-inline;
+
+	.woocommerce-cart-form {
+		margin-block: $spacing-block;
+
+		.shop_table {
+			.cart_item {
+				.product-thumbnail {
+					img {
+						width: 120px;
+					}
+				}
+			}
+		}
+	}
+
+	.cart-collaterals {
+		margin-block: $spacing-block;
+	}
+}

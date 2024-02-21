@@ -1,8 +1,55 @@
+.woocommerce {
+	form {
+		.form-row {
+			textarea {
+				height: unset;
+
+				&::placeholder {
+					color: rgba($color-black, 0.8);
+					font-family: $font-family-body;
+					line-height: 1.5;
+				}
+			}
+		}
+	}
+
+	a.button,
+	button.button,
+	.woocommerce-button {
+		@extend .button;
+		font-weight: 400;
+		padding: 1rem 1.5rem;
+
+		&:hover {
+			text-decoration: underline;
+		}
+
+		&.alt {
+			background-color: $color-secondary;
+
+			&:hover {
+				background-color: $color-secondary;
+			}
+		}
+	}
+
+	a.remove {
+		color: $color-secondary !important;
+		transition: background-color $transition;
+
+		&:hover {
+			background: rgba($color-secondary, 0.2);
+			color: $color-secondary !important;
+		}
+	}
+}
+
 .woocommerce-page {
 	.woocommerce-info {
 		align-items: center;
-		background-color: rgba($color-primary, 0.1);
+		background-color: white;
 		border-top-color: $color-primary;
+		box-shadow: $boxshadow;
 		display: flex;
 		flex-direction: row;
 		font-family: $font-family-body;
@@ -35,11 +82,13 @@
 	.woocommerce-notices-wrapper {
 		margin: 2rem auto;
 		max-width: 800px;
+		padding-inline: $padding-inline;
 
 		.woocommerce-message {
 			align-items: center;
-			background-color: rgba($color-primary, 0.1);
+			background-color: white;
 			border-top-color: $color-primary;
+			box-shadow: $boxshadow;
 			display: flex;
 			flex-direction: row-reverse;
 			font-family: $font-family-body;

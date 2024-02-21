@@ -17,27 +17,28 @@
 
 defined( 'ABSPATH' ) || exit;
 ?>
-
-<div class="container">
-	<div class="account-content-wrapper">
-		<?php
-		/**
-		 * My Account navigation.
-		 *
-		 * @since 2.6.0
-		 */
-		do_action( 'woocommerce_account_navigation' );
-		?>
-		<div class="woocommerce-myaccount-content">
+<div class="account-wrapper">
+	<div class="container">
+		<div class="account-content-wrapper">
 			<?php
-				/**
-				 * My Account content.
-				 *
-				 * @since 2.6.0
-				 */
-				remove_action( 'woocommerce_account_content', 'woocommerce_output_all_notices', 5 );
-				do_action( 'woocommerce_account_content' );
+			/**
+			 * My Account navigation.
+			 *
+			 * @since 2.6.0
+			 */
+			do_action( 'woocommerce_account_navigation' );
 			?>
+			<div class="woocommerce-myaccount-content">
+				<?php
+					/**
+					 * My Account content.
+					 *
+					 * @since 2.6.0
+					 */
+					remove_action( 'woocommerce_account_content', 'woocommerce_output_all_notices', 5 );
+					do_action( 'woocommerce_account_content' );
+				?>
+			</div>
 		</div>
 	</div>
 </div>

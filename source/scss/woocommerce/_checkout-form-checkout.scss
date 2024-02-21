@@ -1,0 +1,21 @@
+.form-checkout-wrapper {
+	margin-block: $spacing-block;
+	padding-inline: $padding-inline;
+
+	.customer-details-wrapper {
+		#customer_details {
+			display: flex;
+			flex-direction: column;
+			gap: 2rem;
+		}
+	}
+
+	.woocommerce-checkout {
+		display: grid;
+		gap: 2rem;
+
+		@include medium {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+}
