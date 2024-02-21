@@ -39,6 +39,52 @@ if ( function_exists( 'acf_add_local_field_group' ) ) {
 
 		acf_add_local_field_group(
 			array(
+				'key'                   => 'group_product_fields',
+				'title'                 => 'Product Fields',
+				'fields'                => array(
+					array(
+						'key'          => 'field_product_youtube_videos',
+						'label'        => __( 'YouTube URLs', 'toms' ),
+						'name'         => 'product-youtube-videos',
+						'type'         => 'repeater',
+						'required'     => 0,
+						'max'          => 3,
+						'button_label' => __( 'Add a YouTube video', 'toms' ),
+						'sub_fields'   => array(
+							array(
+								'key'      => 'field_product_youtube_video',
+								'label'    => __( 'YouTube URL', 'toms' ),
+								'name'     => 'product-youtube-video',
+								'type'     => 'url',
+								'required' => 1,
+							),
+						),
+					),
+					array(
+						'key'      => 'field_product_spotify_embed',
+						'label'    => __( 'Spotify Embed', 'toms' ),
+						'name'     => 'product-spotify-embed',
+						'type'     => 'textarea',
+						'required' => 0,
+					),
+				),
+				'location'              => array(
+					array(
+						array(
+							'param'    => 'post_type',
+							'operator' => '==',
+							'value'    => 'product',
+						),
+					),
+				),
+				'label_placement'       => 'top',
+				'instruction_placement' => 'label',
+				'active'                => true,
+			),
+		);
+
+		acf_add_local_field_group(
+			array(
 				'key'                   => 'group_review_fields',
 				'title'                 => 'Review Fields',
 				'fields'                => array(
