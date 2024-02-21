@@ -32,7 +32,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ) {
 				'instruction_placement' => 'label',
 				'active'                => true,
 				'hide_on_screen'        => array(
-					0 => 'the_content',
+					// 0 => 'the_content',
 				),
 			),
 		);

@@ -48,3 +48,10 @@ function toms_remove_downloads_meta_box() {
 	remove_meta_box( 'woocommerce-order-downloads', 'shop_order', 'normal' );
 }
 add_action( 'add_meta_boxes', 'toms_remove_downloads_meta_box', 999 );
+
+function toms_set_quantity_to_one() {
+	foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
+		WC()->cart->set_quantity( $cart_item_key, 1, true );
+	}
+}
+add_action( 'init', 'toms_set_quantity_to_one' );

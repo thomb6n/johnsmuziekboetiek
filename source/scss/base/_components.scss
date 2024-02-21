@@ -15,6 +15,12 @@ a {
 	font-family: $font-family-body;
 	padding: 1rem 1.5rem;
 	width: fit-content;
+
+	&.button-primary {
+		background-color: $color-secondary !important;
+		border: 1px solid $color-secondary !important;
+		color: $color-white !important;
+	}
 }
 
 input {

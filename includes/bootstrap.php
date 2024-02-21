@@ -1,5 +1,11 @@
 <?php
 
+function toms_allowed_blocks( $allowed_blocks ) {
+	$allowed_blocks = array();
+	return $allowed_blocks;
+}
+add_filter( 'allowed_block_types_all', 'toms_allowed_blocks' );
+
 function toms_remove_admin_menus() {
 	remove_menu_page( 'edit-comments.php' );
 }
@@ -11,11 +17,11 @@ function toms_remove_comment_support() {
 }
 add_action( 'init', 'toms_remove_comment_support', 100 );
 
-function toms_remove_comments() {
+function toms_remove_comments_from_admin_bar() {
 	global $wp_admin_bar;
 	$wp_admin_bar->remove_menu( 'comments' );
 }
-add_action( 'wp_before_admin_bar_render', 'toms_remove_comments' );
+add_action( 'wp_before_admin_bar_render', 'toms_remove_comments_from_admin_bar' );
 
 function toms_setup_theme() {
 	add_filter( 'use_block_editor_for_post', '__return_false', 10 );

@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		const offCanvas = document.querySelector(
 			'[data-toggler="' + button.dataset.toggle + '"]'
 		);
-		console.log(offCanvas);
 
 		// Remove inline display: none to prevent offcanvas showing up on page load
 		offCanvas.removeAttribute("style");

@@ -1,0 +1,24 @@
+.account-content-wrapper {
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: 1fr 3fr;
+	margin-block: $spacing-block;
+
+	.woocommerce-myaccount-content {
+		.welcome-message {
+			font-family: $font-family-heading;
+			font-size: $font-size-x-large;
+			margin-bottom: 1rem;
+		}
+
+		p {
+			&:first-child {
+				margin-top: 0;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: John's Muziekboetiek\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-21 17:05+0000\n"
+"POT-Creation-Date: 2024-02-21 20:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -20,12 +20,20 @@ msgstr ""
 msgid "Account"
 msgstr ""
 
+#: includes/acf.php:52
+msgid "Add a YouTube video"
+msgstr ""
+
 #: includes/helpers.php:37 includes/helpers.php:38
 msgid "Add New"
 msgstr ""
 
 #: includes/acf.php:18
 msgid "Add new layout"
+msgstr ""
+
+#: woocommerce/content-single-product.php:77
+msgid "Add to cart"
 msgstr ""
 
 #: includes/helpers.php:36
@@ -60,7 +68,7 @@ msgstr ""
 msgid "Content"
 msgstr ""
 
-#: includes/bootstrap.php:56
+#: includes/bootstrap.php:73
 msgid "Copyright"
 msgstr ""
 
@@ -77,7 +85,7 @@ msgstr ""
 msgid "Filters"
 msgstr ""
 
-#: includes/bootstrap.php:44
+#: includes/bootstrap.php:61
 msgid "Footer"
 msgstr ""
 
@@ -109,6 +117,10 @@ msgstr ""
 msgid "Layouts"
 msgstr ""
 
+#: woocommerce/content-single-product.php:111
+msgid "Listen now"
+msgstr ""
+
 #: header.php:59
 msgid "Menu"
 msgstr ""
@@ -137,7 +149,7 @@ msgstr ""
 msgid "Popular categories"
 msgstr ""
 
-#: includes/bootstrap.php:21
+#: includes/bootstrap.php:38
 msgid "Primary Menu"
 msgstr ""
 
@@ -161,19 +173,19 @@ msgstr ""
 msgid "Review"
 msgstr ""
 
-#: includes/acf.php:63
+#: includes/acf.php:109
 msgid "Review Author"
 msgstr ""
 
-#: includes/acf.php:70
+#: includes/acf.php:116
 msgid "Review Source"
 msgstr ""
 
-#: includes/acf.php:47
+#: includes/acf.php:93
 msgid "Review Stars"
 msgstr ""
 
-#: includes/acf.php:56
+#: includes/acf.php:102
 msgid "Review Text"
 msgstr ""
 
@@ -189,7 +201,7 @@ msgstr ""
 msgid "Search..."
 msgstr ""
 
-#: includes/bootstrap.php:22
+#: includes/bootstrap.php:39
 msgid "Secondary Menu"
 msgstr ""
 
@@ -199,6 +211,10 @@ msgstr ""
 
 #: footer.php:4
 msgid "Site footer"
+msgstr ""
+
+#: includes/acf.php:65
+msgid "Spotify Embed"
 msgstr ""
 
 #: layouts/featured-products/acf.php:20
@@ -217,6 +233,10 @@ msgstr ""
 msgid "This is the reviews layout. It will show all the published reviews."
 msgstr ""
 
+#: woocommerce/content-single-product.php:59
+msgid "This product is already in your cart"
+msgstr ""
+
 #: layouts/featured-products/acf.php:13 layouts/categories/acf.php:13
 #: layouts/header/acf.php:13
 msgid "Title"
@@ -226,11 +246,11 @@ msgstr ""
 msgid "Tom de Visser"
 msgstr ""
 
-#: includes/bootstrap.php:67
+#: includes/bootstrap.php:84
 msgid "Top Bar Left"
 msgstr ""
 
-#: includes/bootstrap.php:78
+#: includes/bootstrap.php:95
 msgid "Top Bar Right"
 msgstr ""
 
@@ -238,6 +258,26 @@ msgstr ""
 msgid "View"
 msgstr ""
 
+#: woocommerce/content-single-product.php:71
+msgid "View cart"
+msgstr ""
+
+#: woocommerce/content-single-product.php:89
+msgid "Watch now"
+msgstr ""
+
 #: layouts/header/header.php:19
 msgid "What are you looking for?"
+msgstr ""
+
+#: woocommerce/content-single-product.php:128
+msgid "You might also like these"
+msgstr ""
+
+#: includes/acf.php:56
+msgid "YouTube URL"
+msgstr ""
+
+#: includes/acf.php:47
+msgid "YouTube URLs"
 msgstr ""

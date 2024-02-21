@@ -16,6 +16,12 @@
 @import "base/footer";
 @import "base/facet-wp";
 
-@import "woocommerce/**/*.scss";
+@import "woocommerce/archive-product";
+@import "woocommerce/components";
+@import "woocommerce/content-product";
+@import "woocommerce/content-single-product";
+@import "woocommerce/myaccount";
+@import "woocommerce/myaccount-navigation";
+
 @import "template-parts/**/*.scss";
 @import "../../layouts*/**/*.scss";
