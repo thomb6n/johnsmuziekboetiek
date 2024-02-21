@@ -74,21 +74,38 @@ get_header( 'shop' );
 </section>
 
 <?php
-$category   = get_term_by( 'slug', get_query_var( 'product_cat' ), 'product_cat' );
-$categories = woocommerce_get_product_subcategories( $category->term_id );
-$title      = __( 'Related categories', 'toms' );
+$title    = __( 'Related categories', 'toms' );
+$category = get_term_by( 'slug', get_query_var( 'product_cat' ), 'product_cat' );
+
+if ( $category ) {
+	$categories = woocommerce_get_product_subcategories( $category->term_id );
+} else {
+	// There's no category on the shop page
+	$title      = __( 'Popular categories', 'toms' );
+	$categories = get_terms(
+		array(
+			'taxonomy'   => 'product_cat',
+			'hide_empty' => true,
+			'number'     => 4,
+			'orderby'    => 'count',
+			'order'      => 'DESC',
+		)
+	);
+}
+
 if ( empty( $categories ) ) {
 	$parent_category = get_term( $category->parent, 'product_cat' );
 	$categories      = woocommerce_get_product_subcategories( $parent_category->term_id );
 	$title           = __( 'Other categories of', 'toms' ) . ' ' . $parent_category->name;
 }
+
 $random_keys       = array_rand( $categories, 4 );
 $random_categories = array();
 
 foreach ( $random_keys as $key ) {
 	// If the category is the same as the current category, or if the category is already in the array, take the next key
-	if ( $category->term_id === $categories[ $key ]->term_id || in_array( $categories[ $key ], $random_categories, true ) ) {
-		$key++;
+	if ( $category && $category->term_id === $categories[ $key ]->term_id || in_array( $categories[ $key ], $random_categories, true ) ) {
+		++$key;
 	}
 	$random_categories[] = $categories[ $key ];
 }
