@@ -1,5 +1,22 @@
 <?php
 
+function toms_remove_admin_menus() {
+	remove_menu_page( 'edit-comments.php' );
+}
+add_action( 'admin_menu', 'toms_remove_admin_menus' );
+
+function toms_remove_comment_support() {
+	remove_post_type_support( 'post', 'comments' );
+	remove_post_type_support( 'page', 'comments' );
+}
+add_action( 'init', 'toms_remove_comment_support', 100 );
+
+function toms_remove_comments() {
+	global $wp_admin_bar;
+	$wp_admin_bar->remove_menu( 'comments' );
+}
+add_action( 'wp_before_admin_bar_render', 'toms_remove_comments' );
+
 function toms_setup_theme() {
 	add_filter( 'use_block_editor_for_post', '__return_false', 10 );
 	add_filter( 'use_block_editor_for_post_type', '__return_false', 10 );

@@ -28,7 +28,7 @@ $product_youtube_videos = get_field( 'product-youtube-videos', $product->ID );
 $related_products       = wc_get_related_products( $product->get_id(), 6 );
 
 $in_cart = false;
-if ( in_array( $product->get_id(), array_column( WC()->cart->get_cart(), 'product_id' ) ) ) {
+if ( in_array( $product->get_id(), array_column( WC()->cart->get_cart(), 'product_id' ), true ) ) {
 	$in_cart = true;
 }
 
