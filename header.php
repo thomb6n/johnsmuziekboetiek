@@ -32,8 +32,11 @@
 						</a>
 					</div>
 
-					<nav id="primary-menu" aria-label="Primary menu" aria-expanded="false">
-						<?php toms_nav_menu( 'primary' ); ?>
+					<div class="navigation-menu-wrapper">
+						<nav id="primary-menu" aria-label="Primary menu" aria-expanded="false">
+							<?php toms_nav_menu( 'primary' ); ?>
+						</nav>
+
 						<div class="menu woocommerce-icons">
 							<a href="<?php echo wc_get_page_permalink( 'myaccount' ); ?>">
 								<i class="fa-regular fa-user"></i>
@@ -48,17 +51,27 @@
 								</span>
 							</a>
 						</div>
-					</nav>
 
-					<button id="menu-toggle" type="button" aria-label="Toggle the navigation" data-toggle="closed">
-						<i class="fa-regular fa-bars open-icon"></i>
-						<i class="fa-regular fa-times close-icon"></i>
-						<span class="screen-reader-text">
-							<?php _e( 'Menu', 'toms' ); ?>
-						</span>
-					</button>
+						<button class="toggle-offcanvas" id="menu-toggle" type="button" aria-label="Toggle the navigation" data-toggle="closed">
+							<i class="fa-regular fa-bars open-icon"></i>
+							<i class="fa-regular fa-times close-icon"></i>
+							<span class="screen-reader-text">
+								<?php _e( 'Menu', 'toms' ); ?>
+							</span>
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
 	</header>
+
+	<div id="offcanvas-main" class="offcanvas closed" data-toggler="menu-toggle" style="display: none;">
+		<div class="inner">
+			<nav id="offcanvas-primary-menu" aria-label="Off-canvas primary menu" aria-expanded="false">
+				<?php toms_nav_menu( 'primary' ); ?>
+			</nav>
+		</div>
+		<div class="background-layer"></div>
+	</div>
+
 	<main id="main">
