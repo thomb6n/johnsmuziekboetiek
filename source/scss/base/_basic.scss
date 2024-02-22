@@ -11,6 +11,13 @@ div:has(.overlay-link) {
 	}
 }
 
+address {
+	color: $color-black;
+	font-family: $font-family-body;
+	font-style: normal;
+	line-height: 1.75;
+}
+
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
 	word-wrap: normal !important;
