@@ -22,7 +22,7 @@
 	color: $color-white;
 	padding-inline: $padding-inline;
 	position: sticky;
-	top: 41px;
+	top: 43.8px;
 	width: 100%;
 	z-index: $z-index-high;
 
@@ -114,8 +114,12 @@
 			#logo {
 				color: $color-white;
 				font-family: $font-family-heading;
-				font-size: $font-size-x-large;
+				font-size: $font-size-large;
 				font-weight: 700;
+
+				@include medium {
+					font-size: $font-size-x-large;
+				}
 
 				&:hover {
 					text-decoration: none;
@@ -134,17 +138,22 @@ body {
 .offcanvas {
 	background-color: $color-primary;
 	display: block;
-	height: calc(100% - 108px);
+	height: calc(100% - 103px);
 	left: 0;
 	overflow: scroll;
 	padding: 2rem $padding-inline;
 	pointer-events: none;
 	position: fixed;
-	top: 108px;
+	top: 103px;
 	transform: translateX(100%);
 	transition: transform $transition;
 	width: 100%;
 	z-index: $z-index-high;
+
+	@include medium {
+		height: calc(100% - 108px);
+		top: 108px;
+	}
 
 	&#offcanvas-main {
 		z-index: calc($z-index-high + 1);

@@ -25,15 +25,14 @@ function toms_register_facets( $facets ) {
 	);
 
 	$facets[] = array(
-		'name'         => 'pagination',
-		'label'        => __( 'Pagination', 'toms' ),
-		'type'         => 'pager',
-		'auto_refresh' => 'yes',
-		'pager_type'   => 'numbers',
-		'inner_size'   => '1',
-		'dots_label'   => '…',
-		'prev_label'   => '<i class="fa-solid fa-angle-left"></i> ',
-		'next_label'   => '<i class="fa-solid fa-angle-right"></i>',
+		'name'       => 'pagination',
+		'label'      => __( 'Pagination', 'toms' ),
+		'type'       => 'pager',
+		'pager_type' => 'numbers',
+		'inner_size' => '1',
+		'dots_label' => '…',
+		'prev_label' => '<i class="fa-solid fa-angle-left"></i> ',
+		'next_label' => '<i class="fa-solid fa-angle-right"></i>',
 	);
 
 	return $facets;

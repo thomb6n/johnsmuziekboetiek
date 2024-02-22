@@ -18,13 +18,21 @@
 			justify-content: center;
 			transition: background-color $transition;
 			padding: 1rem;
-			width: 2.5rem;
+			width: 2rem;
+
+			@include medium {
+				width: 2.5rem;
+			}
 
 			&:hover {
 				background-color: rgba($color-secondary, 0.1);
 			}
 
 			&.dots {
+				border: 0;
+				padding: 0;
+				width: auto;
+
 				&:hover {
 					background-color: transparent;
 					text-decoration: none;

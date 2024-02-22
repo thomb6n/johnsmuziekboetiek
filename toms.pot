@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: John's Muziekboetiek\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-21 20:04+0000\n"
+"POT-Creation-Date: 2024-02-22 15:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -20,7 +20,7 @@ msgstr ""
 msgid "Account"
 msgstr ""
 
-#: includes/acf.php:52
+#: includes/acf.php:59
 msgid "Add a YouTube video"
 msgstr ""
 
@@ -60,7 +60,8 @@ msgstr ""
 msgid "Categories"
 msgstr ""
 
-#: layouts/featured-products/acf.php:32 layouts/featured-products/acf.php:61
+#: includes/facets.php:14 layouts/featured-products/acf.php:32
+#: layouts/featured-products/acf.php:61
 msgid "Category"
 msgstr ""
 
@@ -68,7 +69,7 @@ msgstr ""
 msgid "Content"
 msgstr ""
 
-#: includes/bootstrap.php:73
+#: includes/bootstrap.php:84
 msgid "Copyright"
 msgstr ""
 
@@ -76,16 +77,20 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
+#: woocommerce/myaccount/dashboard.php:60
+msgid "Enjoy your shopping experience!"
+msgstr ""
+
 #: layouts/featured-products/acf.php:8
 msgid "Featured Products"
 msgstr ""
 
-#: woocommerce/archive-product.php:31 woocommerce/archive-product.php:34
-#: woocommerce/archive-product.php:63
+#: home.php:16 home.php:19 home.php:42 woocommerce/archive-product.php:33
+#: woocommerce/archive-product.php:36 woocommerce/archive-product.php:65
 msgid "Filters"
 msgstr ""
 
-#: includes/bootstrap.php:61
+#: includes/bootstrap.php:72
 msgid "Footer"
 msgstr ""
 
@@ -103,6 +108,20 @@ msgstr ""
 
 #: layouts/header/acf.php:8
 msgid "Header"
+msgstr ""
+
+#. 1: user display name 2: logout url
+#: woocommerce/myaccount/dashboard.php:35
+#, php-format
+msgid "Hello %1$s, this is your personal account page"
+msgstr ""
+
+#: includes/woocommerce.php:33 includes/woocommerce.php:34
+msgid "House number"
+msgstr ""
+
+#: woocommerce/myaccount/dashboard.php:60
+msgid "If you have any questions, feel free to contact me at"
 msgstr ""
 
 #. Name of the theme
@@ -133,23 +152,27 @@ msgstr ""
 msgid "New"
 msgstr ""
 
+#: home.php:7
+msgid "News"
+msgstr ""
+
 #: includes/helpers.php:43 includes/helpers.php:44
 msgid "No"
 msgstr ""
 
-#: woocommerce/archive-product.php:99
+#: woocommerce/archive-product.php:102
 msgid "Other categories of"
 msgstr ""
 
-#: includes/facets.php:14
+#: includes/facets.php:29
 msgid "Pagination"
 msgstr ""
 
-#: woocommerce/archive-product.php:84
+#: woocommerce/archive-product.php:87
 msgid "Popular categories"
 msgstr ""
 
-#: includes/bootstrap.php:38
+#: includes/bootstrap.php:49
 msgid "Primary Menu"
 msgstr ""
 
@@ -161,11 +184,15 @@ msgstr ""
 msgid "products"
 msgstr ""
 
+#: single-post.php:39
+msgid "Published on"
+msgstr ""
+
 #: layouts/featured-products/acf.php:26
 msgid "Query"
 msgstr ""
 
-#: woocommerce/archive-product.php:77
+#: woocommerce/archive-product.php:80
 msgid "Related categories"
 msgstr ""
 
@@ -173,19 +200,19 @@ msgstr ""
 msgid "Review"
 msgstr ""
 
-#: includes/acf.php:109
+#: includes/acf.php:116
 msgid "Review Author"
 msgstr ""
 
-#: includes/acf.php:116
+#: includes/acf.php:123
 msgid "Review Source"
 msgstr ""
 
-#: includes/acf.php:93
+#: includes/acf.php:100
 msgid "Review Stars"
 msgstr ""
 
-#: includes/acf.php:102
+#: includes/acf.php:109
 msgid "Review Text"
 msgstr ""
 
@@ -201,11 +228,12 @@ msgstr ""
 msgid "Search..."
 msgstr ""
 
-#: includes/bootstrap.php:39
+#: includes/bootstrap.php:50
 msgid "Secondary Menu"
 msgstr ""
 
-#: woocommerce/archive-product.php:68 woocommerce/archive-product.php:69
+#: home.php:46 home.php:47 woocommerce/archive-product.php:70
+#: woocommerce/archive-product.php:71
 msgid "Show results"
 msgstr ""
 
@@ -213,8 +241,12 @@ msgstr ""
 msgid "Site footer"
 msgstr ""
 
-#: includes/acf.php:65
+#: includes/acf.php:72
 msgid "Spotify Embed"
+msgstr ""
+
+#: includes/woocommerce.php:28 includes/woocommerce.php:29
+msgid "Street"
 msgstr ""
 
 #: layouts/featured-products/acf.php:20
@@ -246,11 +278,11 @@ msgstr ""
 msgid "Tom de Visser"
 msgstr ""
 
-#: includes/bootstrap.php:84
+#: includes/bootstrap.php:95
 msgid "Top Bar Left"
 msgstr ""
 
-#: includes/bootstrap.php:95
+#: includes/bootstrap.php:106
 msgid "Top Bar Right"
 msgstr ""
 
@@ -260,6 +292,10 @@ msgstr ""
 
 #: woocommerce/content-single-product.php:71
 msgid "View cart"
+msgstr ""
+
+#: template-parts/grid-card-product.php:16
+msgid "View product"
 msgstr ""
 
 #: woocommerce/content-single-product.php:89
@@ -274,10 +310,10 @@ msgstr ""
 msgid "You might also like these"
 msgstr ""
 
-#: includes/acf.php:56
+#: includes/acf.php:63
 msgid "YouTube URL"
 msgstr ""
 
-#: includes/acf.php:47
+#: includes/acf.php:54
 msgid "YouTube URLs"
 msgstr ""

@@ -7,15 +7,51 @@
 		.title {
 			text-decoration: underline;
 		}
+
+		.image-wrapper {
+			.product-hover-text {
+				transform: translateY(-100%);
+			}
+		}
 	}
 
-	img {
+	.image-wrapper {
 		aspect-ratio: 1/1;
 		border-radius: $border-radius;
 		box-shadow: $boxshadow;
-		object-fit: cover;
 		margin-bottom: 0.5rem;
+		overflow: hidden;
+		position: relative;
 		width: 100%;
+
+		img {
+			aspect-ratio: 1/1;
+			object-fit: cover;
+			width: 100%;
+		}
+
+		.product-hover-text {
+			background-color: rgba($color-secondary, 0.9);
+			top: 100%;
+			transition: transform $transition;
+			padding-block: 0.5rem;
+			position: absolute;
+			width: 100%;
+
+			p {
+				align-items: center;
+				color: $color-white;
+				display: flex;
+				gap: 0.5rem;
+				justify-content: center;
+				text-align: center;
+				margin: 0;
+
+				i {
+					font-size: 0.75rem;
+				}
+			}
+		}
 	}
 
 	> .title {

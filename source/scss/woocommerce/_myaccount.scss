@@ -4,8 +4,12 @@
 	.account-content-wrapper {
 		display: grid;
 		gap: 2rem;
-		grid-template-columns: 1fr 3fr;
+		grid-template-columns: 1fr;
 		margin-block: $spacing-block;
+
+		@include medium {
+			grid-template-columns: 1fr 3fr;
+		}
 
 		.woocommerce-myaccount-content {
 			.welcome-message {
@@ -20,6 +24,27 @@
 				}
 
 				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+			.woocommerce-orders-table {
+				td {
+					a,
+					.amount {
+						font-size: inherit;
+					}
+				}
+			}
+
+			.woocommerce-address-title {
+				align-items: flex-end;
+				display: flex;
+				gap: 1rem;
+				margin-bottom: 2rem;
+
+				h3 {
+					line-height: 1;
 					margin-bottom: 0;
 				}
 			}
