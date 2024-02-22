@@ -1,6 +1,10 @@
 .woocommerce-cart-wrapper {
 	padding-inline: $padding-inline;
 
+	.woocommerce-empty-card {
+		margin-block: $spacing-block;
+	}
+
 	.woocommerce-cart-form {
 		margin-block: $spacing-block;
 
