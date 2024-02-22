@@ -15,8 +15,8 @@ $background  = get_sub_field( $prefix . 'background' );
 			}
 			?>
 
-			<form action="" method="get" id="header-search">
-				<input type="text" placeholder="<?php _e( 'What are you looking for?', 'toms' ); ?>">
+			<form action="<?php echo get_permalink( wc_get_page_id( 'shop' ) ); ?>" method="get" id="header-search">
+				<input type="text" name="_search" placeholder="<?php _e( 'What are you looking for?', 'toms' ); ?>">
 			</form>
 		</div>
 	</div>
