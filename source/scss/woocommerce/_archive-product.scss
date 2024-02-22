@@ -1,12 +1,14 @@
 .tax-product_cat,
 .post-type-archive-product {
 	.products-overview {
-		display: grid;
-		gap: 1.25rem;
-		grid-template-columns: 1fr;
+		.products-overview-wrapper {
+			display: grid;
+			gap: 1.25rem;
+			grid-template-columns: 1fr;
 
-		@include medium {
-			grid-template-columns: 1fr 3fr;
+			@include medium {
+				grid-template-columns: 1fr 3fr;
+			}
 		}
 
 		.filtering {

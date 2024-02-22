@@ -26,51 +26,54 @@ get_header( 'shop' );
 	</div>
 </section>
 
-<section class="products-overview container">
-	<aside class="filtering">
-		<h2><?php _e( 'Filters', 'toms' ); ?></h2>
-		<?php echo facetwp_display( 'facet', 'search' ); ?>
-		<?php echo facetwp_display( 'facet', 'product_cat' ); ?>
-		<button class="filters-trigger toggle-offcanvas" data-toggle="offcanvas-filters"><?php _e( 'Filters', 'toms' ); ?> <i class="fa-solid fa-sliders-up"></i></button>
-	</aside>
-
-	<div class="products-grid">
-		<?php
-		if ( woocommerce_product_loop() ) {
-			woocommerce_product_loop_start();
-
-			if ( wc_get_loop_prop( 'total' ) ) {
-				while ( have_posts() ) {
-					the_post();
-					get_template_part( 'template-parts/grid-card', 'product' );
-				}
-			}
-
-			woocommerce_product_loop_end();
-		} else {
-			do_action( 'woocommerce_no_products_found' );
-		}
-		?>
-
-		<nav class="woocommerce-facet-pagination">
-			<?php echo facetwp_display( 'facet', 'pagination' ); ?>
-		</nav>
-	</div>
-
-	<div class="offcanvas offcanvas-filters closed" data-toggler="offcanvas-filters" style="display: none;">
-		<div class="inner">
-			<div class="top">
+<section class="products-overview">
+	<div class="container">
+		<div class="products-overview-wrapper">
+			<aside class="filtering">
 				<h2><?php _e( 'Filters', 'toms' ); ?></h2>
-				<button class="filters-close toggle-offcanvas" data-toggle="offcanvas-filters"><i class="fa-regular fa-xmark"></i></button>
+				<?php echo facetwp_display( 'facet', 'search' ); ?>
+				<?php echo facetwp_display( 'facet', 'product_cat' ); ?>
+				<button class="filters-trigger toggle-offcanvas" data-toggle="offcanvas-filters"><?php _e( 'Filters', 'toms' ); ?> <i class="fa-solid fa-sliders-up"></i></button>
+			</aside>
+
+			<div class="products-grid">
+				<?php
+				if ( woocommerce_product_loop() ) {
+					woocommerce_product_loop_start();
+
+					if ( wc_get_loop_prop( 'total' ) ) {
+						while ( have_posts() ) {
+							the_post();
+							get_template_part( 'template-parts/grid-card', 'product' );
+						}
+					}
+
+					woocommerce_product_loop_end();
+				} else {
+					do_action( 'woocommerce_no_products_found' );
+				}
+				?>
+
+				<nav class="woocommerce-facet-pagination">
+					<?php echo facetwp_display( 'facet', 'pagination' ); ?>
+				</nav>
 			</div>
-			<?php echo facetwp_display( 'facet', 'search' ); ?>
-			<?php echo facetwp_display( 'facet', 'product_cat' ); ?>
-			<button class="toggle-offcanvas filters-close show-results" data-toggle="offcanvas-filters" aria-label="<?php echo __( 'Show results', 'toms' ); ?>" type="button" tabindex="0">
-				<?php echo __( 'Show results', 'toms' ); ?>
-			</button>
+
+			<div class="offcanvas offcanvas-filters closed" data-toggler="offcanvas-filters" style="display: none;">
+				<div class="inner">
+					<div class="top">
+						<h2><?php _e( 'Filters', 'toms' ); ?></h2>
+						<button class="filters-close toggle-offcanvas" data-toggle="offcanvas-filters"><i class="fa-regular fa-xmark"></i></button>
+					</div>
+					<?php echo facetwp_display( 'facet', 'search' ); ?>
+					<?php echo facetwp_display( 'facet', 'product_cat' ); ?>
+					<button class="toggle-offcanvas filters-close show-results" data-toggle="offcanvas-filters" aria-label="<?php echo __( 'Show results', 'toms' ); ?>" type="button" tabindex="0">
+						<?php echo __( 'Show results', 'toms' ); ?>
+					</button>
+				</div>
+			</div>
 		</div>
 	</div>
-
 </section>
 
 <?php
