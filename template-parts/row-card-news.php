@@ -23,12 +23,12 @@ $permalink = get_the_permalink( $news );
 		<div class="content-header">
 			<div class="content-left">
 				<h3 class="title"><?php echo $title; ?></h3>
-				<p class="date">
+				<p class="date date-meta">
 					<?php echo $date; ?>
 				</p>
 			</div>
 			<div class="content-right">
-				<span class="category"><?php echo $category; ?></span>
+				<span class="category-tag"><?php echo $category; ?></span>
 			</div>
 		</div>
 		<div class="excerpt-body">
