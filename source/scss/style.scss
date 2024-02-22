@@ -15,6 +15,7 @@
 @import "base/header";
 @import "base/footer";
 @import "base/facet-wp";
+@import "base/home";
 
 @import "woocommerce/archive-product";
 @import "woocommerce/cart";
@@ -25,5 +26,6 @@
 @import "woocommerce/myaccount";
 @import "woocommerce/myaccount-navigation";
 
-@import "template-parts/**/*.scss";
+@import "template-parts/grid-card-product.scss";
+@import "template-parts/row-card-news.scss";
 @import "../../layouts*/**/*.scss";

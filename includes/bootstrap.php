@@ -1,5 +1,10 @@
 <?php
 
+function toms_custom_excerpt_length( $length ) {
+	return 20;
+}
+add_filter( 'excerpt_length', 'toms_custom_excerpt_length', 999 );
+
 function toms_allowed_blocks( $allowed_blocks ) {
 	$allowed_blocks = array();
 	return $allowed_blocks;
