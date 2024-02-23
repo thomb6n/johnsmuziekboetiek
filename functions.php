@@ -20,3 +20,19 @@ if ( class_exists( 'FacetWP' ) ) {
 if ( class_exists( 'acf' ) ) {
 	require 'includes/acf.php';
 }
+
+if ( 'https://johnsmuziekboetiek.flywheelstaging.com' === get_site_url() ) {
+	add_filter(
+		'http_request_args',
+		function ( $args, $url ) {
+			if ( 0 === strpos( $url, get_site_url() ) ) {
+				$args['headers'] = array(
+					'Authorization' => 'Basic ' . base64_encode( 'flywheel:lush-stage' ),
+				);
+			}
+			return $args;
+		},
+		10,
+		2
+	);
+}
