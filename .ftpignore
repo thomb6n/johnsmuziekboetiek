@@ -1,0 +1,8 @@
+.vscode/
+source/
+.git/
+stubs/
+vendor/
+webpack.config.js/
+readme.md
+toms-backup-*.pot

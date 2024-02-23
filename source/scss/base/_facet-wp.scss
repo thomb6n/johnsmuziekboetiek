@@ -4,6 +4,10 @@
 		margin-left: 1.5rem;
 	}
 
+	.facetwp-icon.f-loading:before {
+		animation: unset;
+	}
+
 	.facetwp-pager {
 		display: flex;
 		gap: 0.25rem;

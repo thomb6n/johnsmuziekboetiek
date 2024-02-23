@@ -58,7 +58,7 @@ function toms_load_assets() {
 	wp_deregister_style( 'wp-block-library' );
 	wp_deregister_style( 'global-styles' );
 
-	wp_enqueue_script( 'toms-bundle', get_template_directory_uri() . '/dist/bundle.js', array(), false, true );
+	wp_enqueue_script( 'toms-bundle', get_bloginfo( 'stylesheet_directory' ) . '/dist/bundle.js', array(), false, true );
 }
 add_action( 'wp_enqueue_scripts', 'toms_load_assets' );
 
