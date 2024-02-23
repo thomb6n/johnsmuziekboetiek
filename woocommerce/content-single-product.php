@@ -78,13 +78,6 @@ if ( post_password_required() ) {
 				</div>
 				<div class="product-information">
 					<h1><?php echo $product_title; ?></h1>
-					<?php
-					if ( $in_cart ) {
-						?>
-						<p class="in-cart-notice"><?php _e( 'This product is already in your cart', 'toms' ); ?></p>
-						<?php
-					}
-					?>
 					<div class="product-description">
 						<?php echo apply_filters( 'the_content', $product_description ); ?>
 					</div>
@@ -104,6 +97,19 @@ if ( post_password_required() ) {
 						<?php
 					}
 					?>
+					<div class="categories">
+						<?php
+						$categories = get_the_terms( $product->get_id(), 'product_cat' );
+						if ( $categories ) {
+							foreach ( $categories as $key => $category ) {
+								$category_url = get_term_link( $category );
+								?>
+								<a href="<?php echo $category_url; ?>" class="category-tag"><?php echo $category->name; ?></a>
+								<?php
+							}
+						}
+						?>
+					</div>
 				</div>
 			</div>
 

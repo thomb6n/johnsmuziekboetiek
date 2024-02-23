@@ -66,7 +66,16 @@
 				text-align: center;
 			}
 
-			.product-description {}
+			.categories {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.5rem;
+				margin-top: 1rem;
+
+				.category-tag {
+					background-color: $color-primary;
+				}
+			}
 
 			.price {
 				color: $color-primary;
