@@ -23,8 +23,16 @@ $categories  = ! empty( $args['categories'] ) ? $args['categories'] : get_sub_fi
 						$cat = $cat->term_id;
 					}
 
+					$terms = get_terms(
+						array(
+							'taxonomy'   => 'product_cat',
+							'hide_empty' => false,
+							'include'    => array( $cat ),
+						)
+					);
+
 					$cat_title        = get_term_field( 'name', $cat );
-					$cat_count        = get_term_field( 'count', $cat );
+					$cat_count        = $terms[0]->count;
 					$cat_thumbnail_id = get_term_meta( $cat, 'thumbnail_id', true );
 					$cat_image        = false;
 					if ( $cat_thumbnail_id ) {

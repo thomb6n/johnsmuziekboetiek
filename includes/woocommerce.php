@@ -77,7 +77,7 @@ add_filter( 'product_type_options', 'toms_product_type_options' );
 function toms_remove_product_tabs( $tabs ) {
 	unset( $tabs['linked_product'] );
 	unset( $tabs['attribute'] );
-	unset( $tabs['inventory'] );
+	// unset( $tabs['inventory'] );
 	unset( $tabs['shipping'] );
 	unset( $tabs['advanced'] );
 	return( $tabs );
