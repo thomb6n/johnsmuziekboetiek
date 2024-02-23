@@ -10,7 +10,7 @@ $categories  = ! empty( $args['categories'] ) ? $args['categories'] : get_sub_fi
 			<?php
 			if ( $title ) {
 				?>
-				<h1 class="title"><?php echo $title; ?></h1>
+				<h2 class="title"><?php echo $title; ?></h2>
 				<?php
 			}
 

@@ -1,0 +1,44 @@
+.gform_wrapper {
+	form {
+		.gform_body {
+			.gfield {
+				.gfield_label {
+					@extend .form-label;
+					font-size: $font-size-body;
+					font-weight: 400;
+				}
+
+				.ginput_container {
+					input:not([type="radio"]):not([type="checkbox"]) {
+						@extend .form-input;
+					}
+
+					input {
+						font-family: $font-family-body;
+						font-size: $font-size-body;
+					}
+
+					.gchoice {
+						.gform-field-label {
+							color: $color-black;
+							font-family: $font-family-body;
+							font-size: $font-size-body;
+						}
+					}
+				}
+			}
+		}
+
+		.gform_footer {
+			.gform_button {
+				@extend .button;
+				@extend .button-primary;
+				border-radius: $border-radius !important;
+				font-family: $font-family-body !important;
+				font-size: $font-size-body !important;
+				padding: 1rem 1.5rem !important;
+				width: fit-content !important;
+			}
+		}
+	}
+}
