@@ -22,9 +22,10 @@ $product_title          = get_the_title();
 $product_price          = $product->get_price_html();
 $product_description    = get_the_content();
 $image_id               = $product->get_image_id();
-$product_image          = wp_get_attachment_image_url( $image_id, 'large' );
-$product_spotify_embed  = get_field( 'product-spotify-embed', $product->ID );
-$product_youtube_videos = get_field( 'product-youtube-videos', $product->ID );
+$product_image          = wp_get_attachment_image_url( $image_id, 'full' );
+$product_gallery        = $product->get_gallery_image_ids();
+$product_spotify_embed  = get_field( 'product-spotify-embed', $product->get_id() );
+$product_youtube_videos = get_field( 'product-youtube-videos', $product->get_id() );
 $related_products       = wc_get_related_products( $product->get_id(), 6 );
 
 $in_cart = false;
@@ -48,8 +49,32 @@ if ( post_password_required() ) {
 	<div class="container">
 		<div class="product-content-wrapper">
 			<div class="product-content">
-				<div class="image-wrapper">
-					<img src="<?php echo $product_image; ?>" alt="">
+				<div class="images-wrapper">
+					<div class="image-wrapper">
+						<a href="<?php echo $product_image; ?>" data-fancybox="product-gallery">
+							<img src="<?php echo $product_image; ?>" alt="">
+						</a>
+					</div>
+					<?php
+					if ( count( $product_gallery ) ) {
+						?>
+						<div class="gallery">
+							<?php
+							foreach ( $product_gallery as $image_id ) {
+								$image_url = wp_get_attachment_image_url( $image_id, 'large' );
+								?>
+								<div class="gallery-image">
+									<a href="<?php echo $image_url; ?>" data-fancybox="product-gallery">
+										<img src="<?php echo $image_url; ?>" alt="">
+									</a>
+								</div>
+								<?php
+							}
+							?>
+						</div>
+						<?php
+					}
+					?>
 				</div>
 				<div class="product-information">
 					<h1><?php echo $product_title; ?></h1>
@@ -133,7 +158,6 @@ if ( post_password_required() ) {
 		</div>
 	</div>
 </div>
-
 
 <?php
 do_action( 'woocommerce_template_single_add_to_cart' );

@@ -13,6 +13,7 @@
 		"webpack-cli": "^5.1.4"
 	},
 	"dependencies": {
+		"@fancyapps/ui": "^5.0.33",
 		"swiper": "^11.0.6"
 	}
 }

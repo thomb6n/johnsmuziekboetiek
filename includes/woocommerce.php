@@ -40,9 +40,8 @@ function toms_custom_address_fields( $fields ) {
 }
 add_filter( 'woocommerce_default_address_fields', 'toms_custom_address_fields' );
 
-
 function toms_product_meta_boxes() {
-	remove_meta_box( 'postexcerpt', 'product', 'normal' );
+	// remove_meta_box( 'postexcerpt', 'product', 'normal' );
 	remove_meta_box( 'commentsdiv', 'product', 'normal' );
 	remove_meta_box( 'tagsdiv-product_tag', 'product', 'side' );
 }
@@ -102,4 +101,4 @@ function toms_set_quantity_to_one() {
 		}
 	}
 }
-add_action( 'init', 'toms_set_quantity_to_one' );
+add_action( 'wp_loaded', 'toms_set_quantity_to_one' );
