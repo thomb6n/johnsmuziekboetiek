@@ -4,8 +4,31 @@
 		margin-left: 1.5rem;
 	}
 
+	.facetwp-expand {
+		float: unset;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+
+		.facetwp-toggle {
+			&::before {
+				font-size: $font-size-body;
+				position: relative;
+				right: unset;
+			}
+		}
+	}
+
 	.facetwp-icon.f-loading:before {
 		animation: unset;
+	}
+
+	&.facetwp-facet-results-count {
+		color: $color-black;
+		font-family: $font-family-body;
+		font-size: $font-size-body-small;
+		margin-bottom: 1rem;
 	}
 
 	.facetwp-pager {

@@ -35,6 +35,17 @@ function toms_register_facets( $facets ) {
 		'next_label' => '<i class="fa-solid fa-angle-right"></i>',
 	);
 
+	$facets[] = array(
+		'name'                => 'results-count',
+		'label'               => __( 'Results count', 'toms' ),
+		'type'                => 'pager',
+		'pager_type'          => 'counts',
+		// translators: lower, upper and total results count
+		'count_text_plural'   => sprintf( __( '%1$s - %2$s of %3$s results', 'toms' ), '[lower]', '[upper]', '[total]' ),
+		'count_text_singular' => __( '1 result', 'toms' ),
+		'count_text_none'     => __( 'No results', 'toms' ),
+	);
+
 	return $facets;
 }
 add_filter( 'facetwp_facets', 'toms_register_facets' );

@@ -32,6 +32,7 @@ get_header();
 			</aside>
 
 			<div class="news-overview-grid">
+				<?php echo facetwp_display( 'facet', 'results-count' ); ?>
 				<div class="news">
 					<?php
 					if ( have_posts() ) {

@@ -50,6 +50,8 @@ get_header( 'shop' );
 
 			<div class="products-grid">
 				<?php
+				echo facetwp_display( 'facet', 'results-count' );
+
 				if ( woocommerce_product_loop() ) {
 					woocommerce_product_loop_start();
 

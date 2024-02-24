@@ -23,8 +23,13 @@
 				font-size: $font-size-large;
 				font-weight: 600;
 				gap: 1rem;
+				list-style-type: none;
 				padding-left: 1.5rem;
 				position: relative;
+
+				&::-webkit-details-marker {
+					display: none;
+				}
 
 				&:hover {
 					cursor: pointer;
