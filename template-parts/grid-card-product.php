@@ -18,5 +18,7 @@ $url   = $product->get_permalink();
 	</div>
 	<h3 class="title"><?php echo $product->get_title(); ?></h3>
 	<p class="price"><?php echo $product->get_price_html(); ?></p>
-	<a href="<?php echo $url; ?>" class="overlay-link"></a>
+	<a href="<?php echo $url; ?>" class="overlay-link">
+		<span class="screen-reader-text"><?php echo __( 'View product', 'toms' ) . ' ' . $product->get_title(); ?></span>
+	</a>
 </div>

@@ -45,7 +45,9 @@ $categories  = ! empty( $args['categories'] ) ? $args['categories'] : get_sub_fi
 							<h3 class="category-title"><?php echo $cat_title; ?></h3>
 							<p class="product-count"><?php echo $cat_count . ' ' . __( 'products', 'toms' ); ?></p>
 						</div>
-						<a href="<?php echo $cat_url; ?>" class="overlay-link"></a>
+						<a href="<?php echo $cat_url; ?>" class="overlay-link">
+							<span class="screen-reader-text"><?php echo __( 'Go to', 'toms' ) . ' ' . $cat_title; ?></span>
+						</a>
 					</div>
 					<?php
 				}
