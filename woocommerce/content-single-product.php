@@ -26,7 +26,6 @@ $product_image          = wp_get_attachment_image_url( $image_id, 'full' );
 $product_gallery        = $product->get_gallery_image_ids();
 $product_spotify_embed  = get_field( 'product-spotify-embed', $product->get_id() );
 $product_youtube_videos = get_field( 'product-youtube-videos', $product->get_id() );
-$related_products       = wc_get_related_products( $product->get_id(), 6 );
 
 $in_cart = false;
 if ( in_array( $product->get_id(), array_column( WC()->cart->get_cart(), 'product_id' ), true ) ) {
@@ -133,9 +132,7 @@ if ( post_password_required() ) {
 				</div>
 				<?php
 			}
-			?>
 
-			<?php
 			if ( $product_spotify_embed ) {
 				?>
 				<div class="product-spotify">
@@ -146,15 +143,33 @@ if ( post_password_required() ) {
 				</div>
 				<?php
 			}
-			?>
 
-			<?php
-			if ( $related_products ) {
+			/*
+			* Programmatically find Related content from SearchWP Related
+			*/
+
+			// Instantiate SearchWP Related
+			$searchwp_related = new SearchWP_Related();
+
+			// Use the keywords as defined in the SearchWP Related meta box
+			$keywords = get_post_meta( get_the_ID(), $searchwp_related->meta_key, true );
+
+			$args = array(
+				's'              => $keywords,  // The stored keywords to use
+				'engine'         => 'default',  // the SearchWP engine to use
+				'posts_per_page' => 6,          // how many entries to find
+			);
+
+			// Retrieve Related content for the current post
+			$related_content = $searchwp_related->get( $args );
+
+			// Returns an array of Post objects for you to loop through
+			if ( count( $related_content ) ) {
 				get_template_part(
 					'layouts/featured-products/featured-products',
 					'',
 					array(
-						'products' => $related_products,
+						'products' => $related_content,
 						'query'    => 'handpicked',
 						'title'    => __( 'You might also like these', 'toms' ),
 					)
