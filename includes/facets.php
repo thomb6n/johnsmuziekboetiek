@@ -2,12 +2,20 @@
 
 function toms_register_facets( $facets ) {
 	$facets[] = array(
-		'name'          => 'search',
+		'name'          => 'product_search',
 		'label'         => __( 'Search', 'toms' ),
 		'type'          => 'search',
 		'search_engine' => 'swp_default',
 		'placeholder'   => __( 'Search...', 'toms' ),
 		'auto_refresh'  => 'yes',
+	);
+
+	$facets[] = array(
+		'name'         => 'search',
+		'label'        => __( 'Search', 'toms' ),
+		'type'         => 'search',
+		'placeholder'  => __( 'Search...', 'toms' ),
+		'auto_refresh' => 'yes',
 	);
 
 	$facets[] = array(
@@ -37,7 +45,7 @@ function toms_register_facets( $facets ) {
 	);
 
 	$facets[] = array(
-		'name'                => 'results-count',
+		'name'                => 'results_count',
 		'label'               => __( 'Results count', 'toms' ),
 		'type'                => 'pager',
 		'pager_type'          => 'counts',
