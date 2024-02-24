@@ -58,7 +58,7 @@ $query = new WP_Query( $args );
 							if ( $review_source ) {
 								?>
 								<div class="review-source">
-									<a href="<?php echo $review_source; ?>"><?php echo __( 'source:', 'toms' ) . ' ' . parse_url( $review_source, PHP_URL_HOST ); ?></a>
+									<a href="<?php echo $review_source; ?>" target="_blank"><?php echo __( 'source:', 'toms' ) . ' ' . parse_url( $review_source, PHP_URL_HOST ); ?></a>
 								</div>
 								<?php
 							}
