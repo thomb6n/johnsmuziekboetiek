@@ -1,5 +1,6 @@
 .top-bar {
 	background-color: $color-white;
+	min-height: 44px;
 	padding-inline: $padding-inline;
 	position: sticky;
 	top: 0;
@@ -22,7 +23,7 @@
 	color: $color-white;
 	padding-inline: $padding-inline;
 	position: sticky;
-	top: 43.8px;
+	top: 44px;
 	width: 100%;
 	z-index: $z-index-high;
 
