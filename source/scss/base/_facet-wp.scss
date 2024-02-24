@@ -4,22 +4,6 @@
 		margin-left: 1.5rem;
 	}
 
-	.facetwp-expand {
-		float: unset;
-		position: absolute;
-		right: 0;
-		top: 50%;
-		transform: translateY(-50%);
-
-		.facetwp-toggle {
-			&::before {
-				font-size: $font-size-body;
-				position: relative;
-				right: unset;
-			}
-		}
-	}
-
 	.facetwp-icon.f-loading:before {
 		animation: unset;
 	}
@@ -134,25 +118,33 @@
 			color: $color-primary;
 		}
 
-		.facetwp-toggle {
-			position: relative;
+		.facetwp-expand {
+			float: unset;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
 
-			&::before {
-				font-family: $icons;
-				font-size: 0.875rem;
-				position: absolute;
-				right: 0;
-			}
+			.facetwp-toggle {
+				position: relative;
 
-			&.expand {
 				&::before {
-					content: "\2b";
+					font-family: $icons;
+					font-size: 0.875rem;
+					position: relative;
+					right: unset;
 				}
-			}
 
-			&.collapse {
-				&::before {
-					content: "\f068";
+				&.expand {
+					&::before {
+						content: "\2b";
+					}
+				}
+
+				&.collapse {
+					&::before {
+						content: "\f068";
+					}
 				}
 			}
 		}
