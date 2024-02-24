@@ -1,0 +1,35 @@
+.faqs {
+	.faqs-wrapper {
+		display: flex;
+		flex-direction: column;
+
+		.faq {
+			border-bottom: 1px solid $color-primary;
+			padding-block: 2rem;
+
+			&[open] {
+				.faq-question {
+					&::before {
+						transform: rotate(90deg);
+					}
+				}
+			}
+
+			.faq-question {
+				align-items: flex-start;
+				display: flex;
+				font-family: $font-family-heading;
+				font-size: $font-size-large;
+				gap: 1rem;
+
+				&::before {
+					content: '\f054';
+					font-family: $icons;
+					font-size: $font-size-body;
+					margin-top: 0.25rem;
+					transition: transform $transition;
+				}
+			}
+		}
+	}
+}

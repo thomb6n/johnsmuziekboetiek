@@ -10,3 +10,14 @@ toms_register_post_type(
 		'publicly_queryable' => false,
 	)
 );
+
+toms_register_post_type(
+	'faq',
+	__( 'FAQ', 'toms' ),
+	__( 'FAQs', 'toms' ),
+	array(
+		'menu_icon'          => 'dashicons-testimonial',
+		'supports'           => array( 'title', 'editor' ),
+		'publicly_queryable' => false,
+	)
+);
