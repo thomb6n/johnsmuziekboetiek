@@ -21,6 +21,7 @@ $query = new WP_Query( $args );
 						$review_text   = get_field( 'review-text' );
 						$review_stars  = get_field( 'review-stars' );
 						$review_author = get_field( 'review-author' );
+						$review_source = get_field( 'review-source' );
 						?>
 						<div class="review-slide swiper-slide">
 							<?php
@@ -50,6 +51,14 @@ $query = new WP_Query( $args );
 								?>
 								<div class="review-author">
 									<p><?php echo $review_author; ?></p>
+								</div>
+								<?php
+							}
+
+							if ( $review_source ) {
+								?>
+								<div class="review-source">
+									<a href="<?php echo $review_source; ?>"><?php echo __( 'source:', 'toms' ) . ' ' . parse_url( $review_source, PHP_URL_HOST ); ?></a>
 								</div>
 								<?php
 							}

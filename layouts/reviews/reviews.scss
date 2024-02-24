@@ -39,6 +39,14 @@
 					font-family: $font-family-heading;
 				}
 			}
+
+			.review-source {
+				a {
+					color: $color-primary;
+					font-family: $font-family-heading;
+					font-size: $font-size-body-small;
+				}
+			}
 		}
 
 		.review-slider-nav {

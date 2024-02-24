@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			delay: 5000,
 		},
 		speed: 1000,
-		autoHeight: false,
+		autoHeight: true,
 		slidesPerView: 1,
 		navigation: {
 			nextEl: ".review-slider-nav .slider-next",

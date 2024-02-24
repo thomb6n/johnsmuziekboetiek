@@ -21,6 +21,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header( 'shop' );
 
+?>
+<div class="breadcrumbs-wrapper">
+	<div class="container">
+		<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+			<?php
+			if ( function_exists( 'bcn_display' ) && ! is_front_page() ) {
+				bcn_display();
+			}
+			?>
+		</div>
+	</div>
+</div>
+<?php
+
 /**
  * woocommerce_before_main_content hook.
  *

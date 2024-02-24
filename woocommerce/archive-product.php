@@ -26,6 +26,18 @@ get_header( 'shop' );
 	</div>
 </section>
 
+<div class="breadcrumbs-wrapper">
+	<div class="container">
+		<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+			<?php
+			if ( function_exists( 'bcn_display' ) && ! is_front_page() ) {
+				bcn_display();
+			}
+			?>
+		</div>
+	</div>
+</div>
+
 <section class="products-overview">
 	<div class="container">
 		<div class="products-overview-wrapper">

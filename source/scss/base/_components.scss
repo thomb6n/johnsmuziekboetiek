@@ -23,6 +23,27 @@ a {
 	}
 }
 
+.breadcrumbs-wrapper {
+	padding-inline: $padding-inline;
+
+	.breadcrumbs {
+		align-items: center;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin-block: 1rem;
+
+		span {
+			font-family: $font-family-body;
+			font-size: $font-size-body-small;
+
+			span {
+				line-height: 2;
+			}
+		}
+	}
+}
+
 .date-meta {
 	color: $color-primary;
 	font-size: $font-size-body-small;
