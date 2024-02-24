@@ -128,8 +128,14 @@
 				grid-template-columns: repeat(3, minmax(0, 1fr));
 			}
 
-			iframe {
+			.product-video {
+				aspect-ratio: 4 / 3 !important;
 				width: 100%;
+
+				iframe {
+					height: 100%;
+					width: 100%;
+				}
 			}
 		};
 	}
