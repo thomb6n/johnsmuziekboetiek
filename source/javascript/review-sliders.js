@@ -6,9 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		modules: [Navigation, A11y, Autoplay],
 		a11y: true,
 		loop: true,
-		autoplay: {
-			delay: 5000,
-		},
 		speed: 1000,
 		autoHeight: true,
 		slidesPerView: 1,

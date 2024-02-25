@@ -125,7 +125,7 @@
 			grid-template-columns: repeat(1, minmax(0, 1fr));
 
 			@include medium {
-				grid-template-columns: repeat(3, minmax(0, 1fr));
+				grid-template-columns: repeat(2, minmax(0, 1fr));
 			}
 
 			.product-video {
@@ -135,6 +135,15 @@
 				iframe {
 					height: 100%;
 					width: 100%;
+				}
+
+				.video-note {
+					border-left: 3px solid $color-secondary;
+					color: $color-black;
+					font-family: $font-family-body;
+					font-style: italic;
+					margin-top: 0.5rem;
+					padding: 0 1rem;
 				}
 			}
 		};

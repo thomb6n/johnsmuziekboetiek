@@ -121,9 +121,18 @@ if ( post_password_required() ) {
 						<?php
 						foreach ( $product_youtube_videos as $youtube_video ) {
 							$youtube_video_url = $youtube_video['product-youtube-video'];
+							$youtube_note      = $youtube_video['product-youtube-note'];
 							?>
 							<div class="product-video">
-								<?php echo wp_oembed_get( $youtube_video_url ); ?>
+								<?php
+								echo wp_oembed_get( $youtube_video_url );
+
+								if ( $youtube_note ) {
+									?>
+									<p class="video-note"><?php echo $youtube_note; ?></p>
+									<?php
+								}
+								?>
 							</div>
 							<?php
 						}

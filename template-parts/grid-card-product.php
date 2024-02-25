@@ -6,7 +6,7 @@ if ( ! $product instanceof WC_Product ) {
 }
 
 $image = $product->get_image_id();
-$image = wp_get_attachment_image_url( $image, 'small' );
+$image = wp_get_attachment_image_url( $image, 'medium' );
 $url   = $product->get_permalink();
 ?>
 <div class="grid-card-product">

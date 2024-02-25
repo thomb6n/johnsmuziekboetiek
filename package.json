@@ -5,6 +5,7 @@
 	},
 	"devDependencies": {
 		"css-loader": "^6.10.0",
+		"mini-css-extract-plugin": "^2.8.0",
 		"node-sass-glob-importer": "^5.3.3",
 		"sass": "^1.70.0",
 		"sass-loader": "^14.1.0",

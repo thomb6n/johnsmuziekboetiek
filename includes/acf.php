@@ -65,6 +65,13 @@ if ( function_exists( 'acf_add_local_field_group' ) ) {
 								'type'     => 'url',
 								'required' => 1,
 							),
+							array(
+								'key'      => 'field_product_youtube_note',
+								'label'    => __( 'YouTube Note', 'toms' ),
+								'name'     => 'product-youtube-note',
+								'type'     => 'text',
+								'required' => 0,
+							),
 						),
 					),
 					array(

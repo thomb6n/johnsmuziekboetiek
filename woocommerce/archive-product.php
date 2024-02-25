@@ -64,7 +64,9 @@ get_header( 'shop' );
 
 					woocommerce_product_loop_end();
 				} else {
-					do_action( 'woocommerce_no_products_found' );
+					?>
+					<div class="woocommerce-info"><?php _e( 'No products matched your search criteria', 'toms' ); ?></div>
+					<?php
 				}
 				?>
 

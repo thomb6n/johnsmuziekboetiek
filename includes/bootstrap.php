@@ -59,6 +59,7 @@ function toms_load_assets() {
 	wp_deregister_style( 'wp-block-library' );
 	wp_deregister_style( 'global-styles' );
 
+	wp_enqueue_style( 'toms-style-bundle', get_bloginfo( 'stylesheet_directory' ) . '/dist/main.css', array(), false );
 	wp_enqueue_script( 'toms-bundle', get_bloginfo( 'stylesheet_directory' ) . '/dist/bundle.js', array(), false, true );
 }
 add_action( 'wp_enqueue_scripts', 'toms_load_assets' );
@@ -79,37 +80,37 @@ function tom_register_sidebars() {
 		);
 	}
 
-		register_sidebar(
-			array(
-				'id'            => 'copyright',
-				'name'          => __( 'Copyright', 'toms' ),
-				'before_widget' => '<div id="%1$s" class="widget %2$s">',
-				'after_widget'  => '</div>',
-				'before_title'  => '<span class="copyright-title">',
-				'after_title'   => '</span>',
-			)
-		);
+	register_sidebar(
+		array(
+			'id'            => 'copyright',
+			'name'          => __( 'Copyright', 'toms' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<span class="copyright-title">',
+			'after_title'   => '</span>',
+		)
+	);
 
-		register_sidebar(
-			array(
-				'id'            => 'topbar-left',
-				'name'          => __( 'Top Bar Left', 'toms' ),
-				'before_widget' => '',
-				'after_widget'  => '',
-				'before_title'  => '<span class="topbar-left-title">',
-				'after_title'   => '</span>',
-			)
-		);
+	register_sidebar(
+		array(
+			'id'            => 'topbar-left',
+			'name'          => __( 'Top Bar Left', 'toms' ),
+			'before_widget' => '',
+			'after_widget'  => '',
+			'before_title'  => '<span class="topbar-left-title">',
+			'after_title'   => '</span>',
+		)
+	);
 
-		register_sidebar(
-			array(
-				'id'            => 'topbar-right',
-				'name'          => __( 'Top Bar Right', 'toms' ),
-				'before_widget' => '',
-				'after_widget'  => '',
-				'before_title'  => '<span class="topbar-right-title">',
-				'after_title'   => '</span>',
-			)
-		);
+	register_sidebar(
+		array(
+			'id'            => 'topbar-right',
+			'name'          => __( 'Top Bar Right', 'toms' ),
+			'before_widget' => '',
+			'after_widget'  => '',
+			'before_title'  => '<span class="topbar-right-title">',
+			'after_title'   => '</span>',
+		)
+	);
 }
 add_action( 'widgets_init', 'tom_register_sidebars' );
