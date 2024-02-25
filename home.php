@@ -55,7 +55,10 @@ get_header();
 						<h2><?php _e( 'Filters', 'toms' ); ?></h2>
 						<button class="filters-close toggle-offcanvas" data-toggle="offcanvas-filters"><i class="fa-regular fa-xmark"></i></button>
 					</div>
-					<?php echo facetwp_display( 'facet', 'search' ); ?>
+					<?php
+					echo facetwp_display( 'facet', 'search' );
+					echo facetwp_display( 'facet', 'category' );
+					?>
 					<button class="toggle-offcanvas filters-close show-results" data-toggle="offcanvas-filters" aria-label="<?php echo __( 'Show results', 'toms' ); ?>" type="button" tabindex="0">
 						<?php echo __( 'Show results', 'toms' ); ?>
 					</button>
