@@ -118,13 +118,22 @@ if ( empty( $categories ) ) {
 	$title           = __( 'Other categories of', 'toms' ) . ' ' . $parent_category->name;
 }
 
-$random_keys       = array_rand( $categories, 4 );
+$count = 4;
+if ( $count > count( $categories ) ) {
+	$count = count( $categories );
+}
+
+$random_keys       = array_rand( $categories, $count );
 $random_categories = array();
 
 foreach ( $random_keys as $key ) {
 	// If the category is the same as the current category, or if the category is already in the array, take the next key
 	if ( $category && $category->term_id === $categories[ $key ]->term_id || in_array( $categories[ $key ], $random_categories, true ) ) {
 		++$key;
+	}
+
+	if ( $key >= $count ) {
+		continue;
 	}
 	$random_categories[] = $categories[ $key ];
 }
