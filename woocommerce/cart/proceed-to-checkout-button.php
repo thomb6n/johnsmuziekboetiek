@@ -22,6 +22,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
+<p class="info-notice"><?php _e( 'Would you like to buy more than one unit of an item? Please contact me.', 'toms' ); ?></p>
 <a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="button button-primary wc-forward<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>">
 	<?php esc_html_e( 'Proceed to checkout', 'woocommerce' ); ?>
 </a>
+

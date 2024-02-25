@@ -44,6 +44,16 @@ a {
 	}
 }
 
+.info-notice {
+	background-color: rgba($color-secondary, 0.1);
+	border-left: 5px solid $color-secondary;
+	color: $color-black;
+	font-family: $font-family-body;
+	font-size: $font-size-body-small;
+	margin-top: 0;
+	padding: 1rem;
+}
+
 .date-meta {
 	color: $color-primary;
 	font-size: $font-size-body-small;
