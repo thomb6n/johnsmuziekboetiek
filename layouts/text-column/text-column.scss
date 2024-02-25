@@ -1,10 +1,21 @@
 .text-column {
-	background-color: $color-secondary;
+	&.no-background {
+		margin-block: $spacing-block;
+	}
 
-	h2,
-	h3,
-	p,
-	a {
-		color: $color-white;
+	&.has-background {
+		&.secondary {
+			background-color: $color-secondary;
+		}
+
+		h1,
+		h2,
+		h3,
+		p,
+		a,
+		ol,
+		ul {
+			color: $color-white;
+		}
 	}
 }

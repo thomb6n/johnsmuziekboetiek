@@ -5,8 +5,9 @@ $content     = ! empty( $args['content'] ) ? $args['content'] : get_sub_field( $
 if ( empty( $content ) ) {
 	return;
 }
+$background = ! empty( $args['content'] ) ? $args['content'] : get_sub_field( $prefix . 'background' );
 ?>
-<section class="text-column has-background">
+<section class="text-column <?php echo ! empty( $background ) && 'no-background' !== $background ? 'has-background ' . $background : 'no-background'; ?>">
 	<div class="container">
 		<div class="content">
 			<?php

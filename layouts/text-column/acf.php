@@ -15,5 +15,16 @@ $layouts[ $layout_name ] = array(
 			'type'     => 'wysiwyg',
 			'required' => 1,
 		),
+		array(
+			'key'           => 'field_' . $layout_name . '_background',
+			'label'         => __( 'Background', 'toms' ),
+			'name'          => $layout_name . '_background',
+			'type'          => 'radio',
+			'choices'       => array(
+				'no-background' => __( 'No background', 'toms' ),
+				'secondary'     => __( 'Secondary color', 'toms' ),
+			),
+			'default_value' => 'secondary',
+		),
 	),
 );
