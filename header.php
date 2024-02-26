@@ -38,14 +38,20 @@
 						</nav>
 
 						<div class="menu woocommerce-icons">
-							<a href="<?php echo wc_get_page_permalink( 'myaccount' ); ?>">
+							<a class="account-icon" href="<?php echo wc_get_page_permalink( 'myaccount' ); ?>">
 								<i class="fa-regular fa-user"></i>
 								<span class="screen-reader-text">
 									<?php _e( 'Account', 'toms' ); ?>
 								</span>
 							</a>
-							<a href="<?php echo wc_get_cart_url(); ?>">
+							<a class="cart-icon" href="<?php echo wc_get_cart_url(); ?>">
 								<i class="fa-regular fa-shopping-cart"></i>
+								<?php
+								$cart_count = WC()->cart->get_cart_contents_count();
+								if ( $cart_count > 0 ) {
+									echo '<span class="item-count">' . esc_html( $cart_count ) . '</span>';
+								}
+								?>
 								<span class="screen-reader-text">
 									<?php _e( 'Cart', 'toms' ); ?>
 								</span>
