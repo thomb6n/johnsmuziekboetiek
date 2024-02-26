@@ -1,0 +1,6 @@
+.welcome-back {
+	.greeting {
+		@extend .h2;
+		margin-bottom: 0;
+	}
+}
