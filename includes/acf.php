@@ -55,7 +55,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ) {
 						'name'         => 'product-youtube-videos',
 						'type'         => 'repeater',
 						'required'     => 0,
-						'max'          => 3,
+						'max'          => 4,
 						'button_label' => __( 'Add a YouTube video', 'toms' ),
 						'sub_fields'   => array(
 							array(

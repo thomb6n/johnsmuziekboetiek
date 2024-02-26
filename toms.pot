@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: John's Muziekboetiek\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-22 15:04+0000\n"
+"POT-Creation-Date: 2024-02-26 14:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -15,6 +15,16 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.6.6; wp-6.4.3\n"
 "X-Domain: toms"
+
+#. lower, upper and total results count
+#: includes/facets.php:53
+#, php-format
+msgid "%1$s - %2$s of %3$s results"
+msgstr ""
+
+#: includes/facets.php:54
+msgid "1 result"
+msgstr ""
 
 #: header.php:44
 msgid "Account"
@@ -32,7 +42,7 @@ msgstr ""
 msgid "Add new layout"
 msgstr ""
 
-#: woocommerce/content-single-product.php:77
+#: woocommerce/content-single-product.php:94
 msgid "Add to cart"
 msgstr ""
 
@@ -48,11 +58,11 @@ msgstr ""
 msgid "Attributes"
 msgstr ""
 
-#: layouts/header/acf.php:21
+#: layouts/text-column/acf.php:20 layouts/header/acf.php:21
 msgid "Background"
 msgstr ""
 
-#: header.php:50
+#: header.php:56
 msgid "Cart"
 msgstr ""
 
@@ -60,7 +70,7 @@ msgstr ""
 msgid "Categories"
 msgstr ""
 
-#: includes/facets.php:14 layouts/featured-products/acf.php:32
+#: includes/facets.php:23 layouts/featured-products/acf.php:32
 #: layouts/featured-products/acf.php:61
 msgid "Category"
 msgstr ""
@@ -69,7 +79,7 @@ msgstr ""
 msgid "Content"
 msgstr ""
 
-#: includes/bootstrap.php:84
+#: includes/bootstrap.php:86
 msgid "Copyright"
 msgstr ""
 
@@ -81,17 +91,30 @@ msgstr ""
 msgid "Enjoy your shopping experience!"
 msgstr ""
 
+#: includes/cpts.php:16
+msgid "FAQ"
+msgstr ""
+
+#: includes/cpts.php:17 layouts/faqs/acf.php:8
+msgid "FAQs"
+msgstr ""
+
 #: layouts/featured-products/acf.php:8
 msgid "Featured Products"
 msgstr ""
 
-#: home.php:16 home.php:19 home.php:42 woocommerce/archive-product.php:33
-#: woocommerce/archive-product.php:36 woocommerce/archive-product.php:65
+#: archive.php:28 archive.php:31 archive.php:54 home.php:28 home.php:31
+#: home.php:55 woocommerce/archive-product.php:45
+#: woocommerce/archive-product.php:48 woocommerce/archive-product.php:81
 msgid "Filters"
 msgstr ""
 
-#: includes/bootstrap.php:72
+#: includes/bootstrap.php:74
 msgid "Footer"
+msgstr ""
+
+#: layouts/form/acf.php:16 layouts/form/acf.php:34
+msgid "Form"
 msgstr ""
 
 #: includes/helpers.php:43
@@ -100,6 +123,15 @@ msgstr ""
 
 #: includes/helpers.php:44
 msgid "found in Trash"
+msgstr ""
+
+#: layouts/categories/categories.php:49
+msgid "Go to"
+msgstr ""
+
+#: layouts/welcome-back/welcome-back.php:17
+#: layouts/welcome-back/welcome-back.php:23
+msgid "Good to see you again!"
 msgstr ""
 
 #: layouts/featured-products/acf.php:31
@@ -136,15 +168,16 @@ msgstr ""
 msgid "Layouts"
 msgstr ""
 
-#: woocommerce/content-single-product.php:111
+#: woocommerce/content-single-product.php:148
 msgid "Listen now"
 msgstr ""
 
-#: header.php:59
+#: header.php:65
 msgid "Menu"
 msgstr ""
 
-#: layouts/reviews/acf.php:13
+#: layouts/reviews/acf.php:13 layouts/faqs/acf.php:13
+#: layouts/welcome-back/acf.php:13
 msgid "Message"
 msgstr ""
 
@@ -152,7 +185,7 @@ msgstr ""
 msgid "New"
 msgstr ""
 
-#: home.php:7
+#: archive.php:7 home.php:7
 msgid "News"
 msgstr ""
 
@@ -160,19 +193,31 @@ msgstr ""
 msgid "No"
 msgstr ""
 
-#: woocommerce/archive-product.php:102
+#: layouts/text-column/acf.php:24
+msgid "No background"
+msgstr ""
+
+#: woocommerce/archive-product.php:68
+msgid "No products matched your search criteria"
+msgstr ""
+
+#: includes/facets.php:55
+msgid "No results"
+msgstr ""
+
+#: woocommerce/archive-product.php:118
 msgid "Other categories of"
 msgstr ""
 
-#: includes/facets.php:29
+#: includes/facets.php:38
 msgid "Pagination"
 msgstr ""
 
-#: woocommerce/archive-product.php:87
+#: woocommerce/archive-product.php:103
 msgid "Popular categories"
 msgstr ""
 
-#: includes/bootstrap.php:49
+#: includes/bootstrap.php:50
 msgid "Primary Menu"
 msgstr ""
 
@@ -180,11 +225,11 @@ msgstr ""
 msgid "Products"
 msgstr ""
 
-#: layouts/categories/categories.php:38
+#: layouts/categories/categories.php:46
 msgid "products"
 msgstr ""
 
-#: single-post.php:39
+#: single-post.php:51
 msgid "Published on"
 msgstr ""
 
@@ -192,27 +237,31 @@ msgstr ""
 msgid "Query"
 msgstr ""
 
-#: woocommerce/archive-product.php:80
+#: woocommerce/archive-product.php:96
 msgid "Related categories"
+msgstr ""
+
+#: includes/facets.php:49
+msgid "Results count"
 msgstr ""
 
 #: includes/cpts.php:5
 msgid "Review"
 msgstr ""
 
-#: includes/acf.php:116
+#: includes/acf.php:123
 msgid "Review Author"
 msgstr ""
 
-#: includes/acf.php:123
+#: includes/acf.php:130
 msgid "Review Source"
 msgstr ""
 
-#: includes/acf.php:100
+#: includes/acf.php:107
 msgid "Review Stars"
 msgstr ""
 
-#: includes/acf.php:109
+#: includes/acf.php:116
 msgid "Review Text"
 msgstr ""
 
@@ -220,20 +269,24 @@ msgstr ""
 msgid "Reviews"
 msgstr ""
 
-#: includes/facets.php:6 includes/helpers.php:42
+#: includes/helpers.php:42 includes/facets.php:6 includes/facets.php:15
 msgid "Search"
 msgstr ""
 
-#: includes/facets.php:8
+#: includes/facets.php:9 includes/facets.php:17
 msgid "Search..."
 msgstr ""
 
-#: includes/bootstrap.php:50
+#: layouts/text-column/acf.php:25
+msgid "Secondary color"
+msgstr ""
+
+#: includes/bootstrap.php:51
 msgid "Secondary Menu"
 msgstr ""
 
-#: home.php:46 home.php:47 woocommerce/archive-product.php:70
-#: woocommerce/archive-product.php:71
+#: archive.php:58 archive.php:59 home.php:62 home.php:63
+#: woocommerce/archive-product.php:86 woocommerce/archive-product.php:87
 msgid "Show results"
 msgstr ""
 
@@ -241,7 +294,11 @@ msgstr ""
 msgid "Site footer"
 msgstr ""
 
-#: includes/acf.php:72
+#: layouts/reviews/reviews.php:61
+msgid "source:"
+msgstr ""
+
+#: includes/acf.php:79
 msgid "Spotify Embed"
 msgstr ""
 
@@ -253,8 +310,16 @@ msgstr ""
 msgid "Subtitle"
 msgstr ""
 
+#: layouts/form/acf.php:28
+msgid "Text"
+msgstr ""
+
 #: layouts/text-column/acf.php:8
 msgid "Text Column"
+msgstr ""
+
+#: layouts/faqs/acf.php:16
+msgid "This is the FAQs layout. It will show all the published FAQs."
 msgstr ""
 
 #: layouts/header/acf.php:16
@@ -265,12 +330,14 @@ msgstr ""
 msgid "This is the reviews layout. It will show all the published reviews."
 msgstr ""
 
-#: woocommerce/content-single-product.php:59
-msgid "This product is already in your cart"
+#: layouts/welcome-back/acf.php:16
+msgid ""
+"This is the Welcome Back layout. It will show a personalised message when a "
+"user is logged in."
 msgstr ""
 
 #: layouts/featured-products/acf.php:13 layouts/categories/acf.php:13
-#: layouts/header/acf.php:13
+#: layouts/form/acf.php:21 layouts/header/acf.php:13
 msgid "Title"
 msgstr ""
 
@@ -278,11 +345,11 @@ msgstr ""
 msgid "Tom de Visser"
 msgstr ""
 
-#: includes/bootstrap.php:95
+#: includes/bootstrap.php:97
 msgid "Top Bar Left"
 msgstr ""
 
-#: includes/bootstrap.php:106
+#: includes/bootstrap.php:108
 msgid "Top Bar Right"
 msgstr ""
 
@@ -290,24 +357,42 @@ msgstr ""
 msgid "View"
 msgstr ""
 
-#: woocommerce/content-single-product.php:71
+#: woocommerce/content-single-product.php:88
 msgid "View cart"
 msgstr ""
 
 #: template-parts/grid-card-product.php:16
+#: template-parts/grid-card-product.php:22
 msgid "View product"
 msgstr ""
 
-#: woocommerce/content-single-product.php:89
+#: woocommerce/content-single-product.php:119
 msgid "Watch now"
 msgstr ""
 
-#: layouts/header/header.php:19
+#: layouts/welcome-back/acf.php:8
+msgid "Welcome Back"
+msgstr ""
+
+#: layouts/welcome-back/welcome-back.php:15
+#: layouts/welcome-back/welcome-back.php:22
+msgid "Welcome back"
+msgstr ""
+
+#: layouts/header/header.php:20
 msgid "What are you looking for?"
 msgstr ""
 
-#: woocommerce/content-single-product.php:128
+#: woocommerce/cart/proceed-to-checkout-button.php:25
+msgid "Would you like to buy more than one unit of an item? Please contact me."
+msgstr ""
+
+#: woocommerce/content-single-product.php:183
 msgid "You might also like these"
+msgstr ""
+
+#: includes/acf.php:70
+msgid "YouTube Note"
 msgstr ""
 
 #: includes/acf.php:63

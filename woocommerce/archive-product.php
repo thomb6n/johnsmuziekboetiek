@@ -105,7 +105,7 @@ if ( $category ) {
 		array(
 			'taxonomy'   => 'product_cat',
 			'hide_empty' => true,
-			'number'     => 4,
+			'number'     => 8,
 			'orderby'    => 'count',
 			'order'      => 'DESC',
 		)
