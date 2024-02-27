@@ -1,5 +1,7 @@
 <?php
 
+add_filter( 'xmlrpc_enabled', '__return_false' );
+
 function toms_custom_excerpt_length( $length ) {
 	return 20;
 }

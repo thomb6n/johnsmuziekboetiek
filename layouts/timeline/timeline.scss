@@ -1,0 +1,57 @@
+.timeline {
+	margin-block: $spacing-block;
+
+	.text-wrapper {
+		margin-bottom: 2rem;
+	}
+
+	.timeline-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		// Half of the icon's width (12px), minus half of the border (1px)
+		padding-left: 11px;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			// Half of the icon's width (12px), minus half of the border (1px)
+			left: 11px;
+			width: 2px;
+			height: 100%;
+			background-color: $color-primary;
+		}
+
+		.milestone {
+			padding-inline: 2rem;
+			position: relative;
+
+			&::before {
+				background: white;
+				content: "\f058";
+				color: $color-secondary;
+				font-family: $icons;
+				font-weight: 700;
+				font-size: 1.5rem;
+				height: 1.5rem;
+				// Zero minus half of the icon's width (12px), minus half of the border (1px)
+				left: 0 - 11px;
+				position: absolute;
+				top: 0;
+				width: 1.5rem;
+			}
+
+			.title {
+				color: $color-black;
+				margin: 0;
+			}
+
+			.date {
+				color: $color-primary;
+				margin: 0;
+			}
+		}
+	}
+}
