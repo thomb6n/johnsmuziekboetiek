@@ -4,6 +4,7 @@
 			.gfield {
 				.gfield_label {
 					@extend .form-label;
+					color: $color-black;
 					font-size: $font-size-body;
 					font-weight: 400;
 				}
@@ -13,7 +14,10 @@
 						@extend .form-input;
 					}
 
-					input {
+					input,
+					textarea,
+					.gfield_consent_label {
+						color: $color-black;
 						font-family: $font-family-body;
 						font-size: $font-size-body;
 					}
@@ -26,6 +30,22 @@
 						}
 					}
 				}
+
+				.gfield_description {
+					font-family: $font-family-body;
+				}
+			}
+		}
+
+		.gform_confirmation_wrapper {
+			.gform_confirmation_message {
+				background-color: rgba($color-secondary, 0.1);
+				border-left: 5px solid $color-secondary;
+				color: $color-black;
+				font-family: $font-family-body;
+				font-size: $font-size-body-small;
+				margin-top: 0;
+				padding: 1rem;
 			}
 		}
 
