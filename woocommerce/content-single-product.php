@@ -197,6 +197,31 @@ if ( post_password_required() ) {
 </div>
 
 <?php
+$item_condition = str_contains( $product_title, 'Nieuw' ) ? 'https://schema.org/NewCondition' : 'https://schema.org/UsedCondition';
+$availability   = 'outofstock' === $product->get_stock_status() ? 'https://schema.org/OutOfStock' : 'https://schema.org/InStock';
+?>
+
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org/",
+	"@type": "Product",
+	"name": "<?php echo $product_title; ?>",
+	"image": [
+		"<?php echo $product_image; ?>"
+		],
+	"description": "<?php echo wp_strip_all_tags( $product_description, true ); ?>",
+	"offers": {
+		"@type": "Offer",
+		"url": "<?php echo get_the_permalink(); ?>",
+		"priceCurrency": "<?php echo get_woocommerce_currency(); ?>",
+		"price": <?php echo $product->get_price(); ?>,
+		"itemCondition": "<?php echo $item_condition; ?>",
+		"availability": "<?php echo $availability; ?>"
+	}
+}
+</script>
+
+<?php
 do_action( 'woocommerce_template_single_add_to_cart' );
 do_action( 'woocommerce_after_single_product' );
 ?>
