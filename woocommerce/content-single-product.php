@@ -89,11 +89,18 @@ if ( post_password_required() ) {
 						</a>
 						<?php
 					} else {
-						?>
-						<a href="<?php echo $product->add_to_cart_url(); ?>" class="button add-to-cart">
-							<?php _e( 'Add to cart', 'toms' ); ?>
-						</a>
-						<?php
+						if ( 'outofstock' === $product->get_stock_status() ) {
+							?>
+							<p class="out-of-stock"><?php _e( 'Out of stock', 'toms' ); ?></p>
+							<p class="info-notice"><a href="<?php echo get_bloginfo( 'wpurl' ) . '/product-aanvragen/'; ?>"><?php _e( 'We\'re sorry, this item is currently not available. Would you like to be notified when it\'s back in stock?', 'toms' ); ?> <i class="fa-solid fa-arrow-right"></i></a></p>
+							<?php
+						} else {
+							?>
+							<a href="<?php echo $product->add_to_cart_url(); ?>" class="button add-to-cart">
+								<?php _e( 'Add to cart', 'toms' ); ?>
+							</a>
+							<?php
+						}
 					}
 					?>
 					<div class="categories">

@@ -52,6 +52,10 @@ a {
 	font-size: $font-size-body-small;
 	margin-top: 0;
 	padding: 1rem;
+
+	a {
+		font-size: $font-size-body-small;
+	}
 }
 
 .date-meta {

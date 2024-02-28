@@ -56,6 +56,20 @@
 			display: flex;
 			flex-direction: column;
 
+			.out-of-stock {
+				background-color: $color-error-bg;
+				border: 1px solid $color-error-border;
+				border-radius: $border-radius;
+				color: $color-error;
+				display: inline-block;
+				font-family: $font-family-heading;
+				font-size: $font-size-medium;
+				font-weight: 500;
+				line-height: 1;
+				padding: 1rem;
+				width: fit-content;
+			}
+
 			.in-cart-notice {
 				background-color: rgba($color-primary, 0.1);
 				border: 1px solid $color-primary;
