@@ -39,3 +39,37 @@ if ( ! $query->post_count ) {
 		</div>
 	</div>
 </section>
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "FAQPage",
+	"mainEntity": [
+		<?php
+		$count = 0;
+		while ( $query->have_posts() ) {
+			$query->the_post();
+			$faq_question = get_the_title();
+			$faq_answer   = get_the_content();
+
+			if ( ! $faq_question || ! $faq_answer ) {
+				continue;
+			}
+			?>
+			{
+				"@type": "Question",
+				"name": "<?php echo $faq_question; ?>",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "<?php echo wp_strip_all_tags( $faq_answer, true ); ?>"
+				}
+			}
+			<?php
+			$count++;
+			if ( $count < $query->post_count ) {
+				echo ',';
+			}
+		}
+		?>
+	]
+}
+</script>
