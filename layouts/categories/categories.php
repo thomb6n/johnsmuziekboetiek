@@ -36,7 +36,7 @@ $categories  = ! empty( $args['categories'] ) ? $args['categories'] : get_sub_fi
 					$cat_thumbnail_id = get_term_meta( $cat, 'thumbnail_id', true );
 					$cat_image        = false;
 					if ( $cat_thumbnail_id ) {
-						$cat_image = wp_get_attachment_url( $cat_thumbnail_id );
+						$cat_image = wp_get_attachment_image_url( $cat_thumbnail_id, 'medium' );
 					}
 					$cat_url = get_term_link( $cat );
 					?>
