@@ -197,8 +197,11 @@ if ( post_password_required() ) {
 </div>
 
 <?php
-$item_condition = str_contains( $product_title, 'Nieuw' ) ? 'https://schema.org/NewCondition' : 'https://schema.org/UsedCondition';
-$availability   = 'outofstock' === $product->get_stock_status() ? 'https://schema.org/OutOfStock' : 'https://schema.org/InStock';
+$item_condition      = str_contains( $product_title, 'Nieuw' ) ? 'https://schema.org/NewCondition' : 'https://schema.org/UsedCondition';
+$availability        = 'outofstock' === $product->get_stock_status() ? 'https://schema.org/OutOfStock' : 'https://schema.org/InStock';
+$product_description = wp_strip_all_tags( $product_description, true );
+$product_description = str_replace( '"', '', $product_description );
+$product_title       = str_replace( '"', '', $product_title );
 ?>
 
 <script type="application/ld+json">
@@ -209,7 +212,7 @@ $availability   = 'outofstock' === $product->get_stock_status() ? 'https://schem
 	"image": [
 		"<?php echo $product_image; ?>"
 		],
-	"description": "<?php echo wp_strip_all_tags( $product_description, true ); ?>",
+	"description": "<?php echo $product_description; ?>",
 	"offers": {
 		"@type": "Offer",
 		"url": "<?php echo get_the_permalink(); ?>",

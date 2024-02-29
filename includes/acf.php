@@ -26,13 +26,6 @@ if ( function_exists( 'acf_add_local_field_group' ) ) {
 							'value'    => 'page',
 						),
 					),
-					array(
-						array(
-							'param'    => 'post_type',
-							'operator' => '==',
-							'value'    => 'post',
-						),
-					),
 				),
 				'position'              => 'acf_after_title',
 				'label_placement'       => 'top',
@@ -41,6 +34,35 @@ if ( function_exists( 'acf_add_local_field_group' ) ) {
 				'hide_on_screen'        => array(
 					0 => 'the_content',
 				),
+			),
+		);
+
+		acf_add_local_field_group(
+			array(
+				'key'                   => 'group_posts_layouts',
+				'title'                 => 'Layouts Group',
+				'fields'                => array(
+					array(
+						'key'          => 'field_posts_layouts',
+						'label'        => __( 'Layouts', 'toms' ),
+						'name'         => 'layouts',
+						'type'         => 'flexible_content',
+						'layouts'      => $layouts,
+						'button_label' => __( 'Add new layout', 'toms' ),
+					),
+				),
+				'location'              => array(
+					array(
+						array(
+							'param'    => 'post_type',
+							'operator' => '==',
+							'value'    => 'post',
+						),
+					),
+				),
+				'label_placement'       => 'top',
+				'instruction_placement' => 'label',
+				'active'                => true,
 			),
 		);
 

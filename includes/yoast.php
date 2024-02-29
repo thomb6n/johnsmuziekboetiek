@@ -6,8 +6,6 @@ function toms_modify_organization_schema( $data ) {
 	$data['email']     = 'info@johnsmuziekboetiek.nl';
 	$data['vatID']     = 'NL003331855B55';
 
-	var_dump( $data );
-
 	return $data;
 }
 add_filter( 'wpseo_schema_organization', 'toms_modify_organization_schema', 999, 1 );

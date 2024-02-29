@@ -10,6 +10,7 @@ require 'includes/taxonomies.php';
 
 if ( class_exists( 'WooCommerce' ) ) {
 	require 'includes/woocommerce.php';
+	require 'includes/analytics.php';
 }
 
 if ( class_exists( 'FacetWP' ) ) {
