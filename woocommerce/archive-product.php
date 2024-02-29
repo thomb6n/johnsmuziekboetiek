@@ -149,7 +149,14 @@ get_template_part(
 get_template_part( 'layouts/reviews/reviews' );
 
 if ( $category && ! empty( $category->description ) ) {
-	get_template_part( 'layouts/text-column/text-column', '', array( 'content' => apply_filters( 'the_content', $category->description ) ) );
+	get_template_part(
+		'layouts/text-column/text-column',
+		'',
+		array(
+			'content'    => apply_filters( 'the_content', $category->description ),
+			'background' => 'secondary',
+		)
+	);
 }
 ?>
 
