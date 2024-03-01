@@ -9,7 +9,6 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="preconnect" href="https://www.google.com">
 	<link rel="preconnect" href="https://www.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-175672825-1"></script>
 	<script>

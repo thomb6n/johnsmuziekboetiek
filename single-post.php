@@ -58,7 +58,7 @@ get_header();
 				<main>
 					<div class="content-wrapper">
 						<div class="content-body">
-							<?php echo $content; ?>
+							<?php echo apply_filters( 'the_content', $content ); ?>
 						</div>
 					</div>
 				</main>

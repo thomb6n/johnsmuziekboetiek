@@ -100,3 +100,25 @@ function toms_set_quantity_to_one() {
 	}
 }
 add_action( 'wp_loaded', 'toms_set_quantity_to_one' );
+
+function toms_register_custom_endpoint() {
+	add_rewrite_endpoint( 'gla-add-to-cart', EP_ROOT );
+}
+add_action( 'init', 'toms_register_custom_endpoint' );
+
+function toms_gla_add_to_cart() {
+	// Check if the custom-add-cart parameter is set in the URL
+	if ( isset( $_GET['gla-add-to-cart'] ) ) {
+		// Get the product ID from the URL
+		$product_id = $_GET['gla-add-to-cart'];
+		$product_id = str_replace( 'gla_', '', $product_id );
+
+		$result = WC()->cart->add_to_cart( $product_id );
+
+		if ( $result ) {
+			wp_safe_redirect( wc_get_cart_url() );
+			exit;
+		}
+	}
+}
+add_action( 'template_redirect', 'toms_gla_add_to_cart' );
