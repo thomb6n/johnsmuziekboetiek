@@ -19,7 +19,7 @@
 
 		gtag('config', 'UA-175672825-1');
 	</script>
-	<script src="https://kit.fontawesome.com/84c396f697.js" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/b58f4d24bc.js" crossorigin="anonymous"></script>
 </head>
 
 <body <?php body_class(); ?>>

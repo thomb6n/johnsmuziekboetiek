@@ -26,6 +26,8 @@ $product_image          = wp_get_attachment_image_url( $image_id, 'full' );
 $product_gallery        = $product->get_gallery_image_ids();
 $product_spotify_embed  = get_field( 'product-spotify-embed', $product->get_id() );
 $product_youtube_videos = get_field( 'product-youtube-videos', $product->get_id() );
+$categories             = get_the_terms( $product->get_id(), 'product_cat' );
+$gtin                   = $product->get_meta( '_wc_gla_gtin' );
 
 $in_cart = false;
 if ( in_array( $product->get_id(), array_column( WC()->cart->get_cart(), 'product_id' ), true ) ) {
@@ -105,7 +107,6 @@ if ( post_password_required() ) {
 					?>
 					<div class="categories">
 						<?php
-						$categories = get_the_terms( $product->get_id(), 'product_cat' );
 						if ( $categories ) {
 							foreach ( $categories as $key => $category ) {
 								$category_url = get_term_link( $category );
@@ -116,6 +117,12 @@ if ( post_password_required() ) {
 						}
 						?>
 					</div>
+					<?php
+					if ( $gtin ) {
+						$label = in_array( 'Boeken', array_column( $categories, 'name' ), true ) ? 'ISBN: ' : 'EAN: ';
+						echo '<p class="gtin">' . $label . esc_html( $gtin ) . '</p>';
+					}
+					?>
 				</div>
 			</div>
 
@@ -202,12 +209,20 @@ $availability        = 'outofstock' === $product->get_stock_status() ? 'https://
 $product_description = wp_strip_all_tags( $product_description, true );
 $product_description = str_replace( '"', '', $product_description );
 $product_title       = str_replace( '"', '', $product_title );
+$gtin_clean          = str_replace( '-', '', str_replace( ' ', '', $gtin ) );
 ?>
 
 <script type="application/ld+json">
 {
 	"@context": "https://schema.org/",
 	"@type": "Product",
+	<?php
+	if ( $gtin ) {
+		?>
+		"gtin<?php echo strlen( $gtin_clean ); ?>": "<?php echo $gtin_clean; ?>",
+		<?php
+	}
+	?>
 	"name": "<?php echo $product_title; ?>",
 	"image": [
 		"<?php echo $product_image; ?>"
@@ -220,6 +235,7 @@ $product_title       = str_replace( '"', '', $product_title );
 		"price": <?php echo $product->get_price(); ?>,
 		"itemCondition": "<?php echo $item_condition; ?>",
 		"availability": "<?php echo $availability; ?>"
+
 	}
 }
 </script>

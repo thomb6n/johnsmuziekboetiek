@@ -3,11 +3,13 @@ const globImporter = require("node-sass-glob-importer");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-	entry: "./source/javascript/index.js",
+	entry: {
+		main: "./source/javascript/index.js",
+		vendor: "./source/javascript/vendor/index.js",
+	},
 	mode: "development",
 	output: {
 		path: path.resolve(__dirname, "dist"),
-		filename: "bundle.js",
 	},
 	plugins: [new MiniCssExtractPlugin()],
 	module: {

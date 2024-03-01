@@ -3,8 +3,50 @@ $layout_name = basename( __FILE__, '.php' );
 $prefix      = $layout_name . '_';
 $title       = get_sub_field( $prefix . 'title' );
 $background  = get_sub_field( $prefix . 'background' );
+if ( $background ) {
+	?>
+	<style>
+		<?php
+		if ( is_front_page() ) {
+			?>
+			.header {
+				&.has-background {
+					.title {
+						color: #444;
+					}
+
+					&::before {
+						content: unset;
+					}
+
+					@media screen and (min-width: 40rem) {
+						&::before {
+							background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 45%, rgba(0, 0, 0, 0) 100%);
+							content: "";
+							inset: 0;
+							position: absolute;
+						}
+
+						.title {
+							color: #fff;
+						}
+					}
+				}
+			}
+			<?php
+		}
+		?>
+
+		@media screen and (min-width: 40rem) {
+			.header.has-background {
+				background-image: url('<?php echo $background['sizes']['large']; ?>');
+			}
+		}
+	</style>
+	<?php
+}
 ?>
-<section class="header <?php echo $background ? 'has-background' : ''; ?>" <?php echo $background ? 'style="background-image: url(' . $background['sizes']['large'] . ')"' : ''; ?>>
+<section class="header <?php echo $background ? 'has-background' : ''; ?>">
 	<div class="container">
 		<div class="content">
 			<?php

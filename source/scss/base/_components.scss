@@ -23,6 +23,11 @@ a {
 	}
 }
 
+.gtin {
+	color: $color-primary;
+	font-size: $font-size-body-small;
+}
+
 .breadcrumbs-wrapper {
 	padding-inline: $padding-inline;
 

@@ -61,8 +61,10 @@ function toms_load_assets() {
 	wp_deregister_style( 'wp-block-library' );
 	wp_deregister_style( 'global-styles' );
 
-	wp_enqueue_style( 'toms-style-bundle', get_bloginfo( 'stylesheet_directory' ) . '/dist/main.css', array(), false );
-	wp_enqueue_script( 'toms-bundle', get_bloginfo( 'stylesheet_directory' ) . '/dist/bundle.js', array(), false, true );
+	wp_enqueue_style( 'toms-style-main', get_bloginfo( 'stylesheet_directory' ) . '/dist/main.css', array(), false );
+	wp_enqueue_style( 'toms-style-vendor', get_bloginfo( 'stylesheet_directory' ) . '/dist/vendor.css', array(), false );
+	wp_enqueue_script( 'toms-script-main', get_bloginfo( 'stylesheet_directory' ) . '/dist/main.js', array(), false, true );
+	wp_enqueue_script( 'toms-script-vendor', get_bloginfo( 'stylesheet_directory' ) . '/dist/vendor.js', array(), false, true );
 }
 add_action( 'wp_enqueue_scripts', 'toms_load_assets' );
 
