@@ -7,7 +7,7 @@ module.exports = {
 		main: "./source/javascript/index.js",
 		vendor: "./source/javascript/vendor/index.js",
 	},
-	mode: "development",
+	mode: "production",
 	output: {
 		path: path.resolve(__dirname, "dist"),
 	},
