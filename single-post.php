@@ -10,6 +10,7 @@ $date      = get_the_date( 'd-m-Y', $news );
 $tags      = get_the_tags( $news );
 $tags      = $tags ? wp_list_pluck( $tags, 'name' ) : array();
 $permalink = get_the_permalink( $news );
+$source    = get_field( 'source', $news );
 
 get_header();
 ?>
@@ -48,7 +49,13 @@ get_header();
 					if ( $date ) {
 						?>
 						<p class="date-meta">
-							<?php echo __( 'Published on', 'toms' ) . ' ' . $date; ?>
+							<?php
+							echo __( 'Published on', 'toms' ) . ' ' . $date;
+
+							if ( $source ) {
+								echo ' | ' . __( 'source:', 'toms' ) . ' <a href="' . $source . '" target="_blank">' . parse_url( $source, PHP_URL_HOST ) . '</a>';
+							}
+							?>
 						</p>
 						<?php
 					}

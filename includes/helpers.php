@@ -64,3 +64,28 @@ function toms_register_post_type( string $name, string $singular, string $plural
 
 	register_post_type( $name, $args );
 }
+
+function toms_get_wishlist() {
+	$user_id = get_current_user_id();
+	return get_user_meta( $user_id, 'wishlist', true );
+}
+
+function toms_add_to_wishlist( $product_id ) {
+	$user_id  = get_current_user_id();
+	$wishlist = get_user_meta( $user_id, 'wishlist', true );
+
+	if ( ! $wishlist ) {
+			$wishlist = array( $product_id );
+	} elseif ( ! in_array( $product_id, $wishlist, true ) ) {
+			$wishlist[] = $product_id;
+	}
+
+	update_user_meta( $user_id, 'wishlist', $wishlist );
+}
+
+function toms_remove_from_wishlist( $product_id ) {
+	$user_id          = get_current_user_id();
+	$wishlist         = get_user_meta( $user_id, 'wishlist', true );
+	$updated_wishlist = array_diff( $wishlist, array( $product_id ) );
+	update_user_meta( $user_id, 'wishlist', $updated_wishlist );
+}

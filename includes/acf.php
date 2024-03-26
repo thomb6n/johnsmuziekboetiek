@@ -43,6 +43,12 @@ if ( function_exists( 'acf_add_local_field_group' ) ) {
 				'title'                 => 'Layouts Group',
 				'fields'                => array(
 					array(
+						'key'   => 'field_posts_source',
+						'label' => __( 'Source', 'toms' ),
+						'name'  => 'source',
+						'type'  => 'url',
+					),
+					array(
 						'key'          => 'field_posts_layouts',
 						'label'        => __( 'Layouts', 'toms' ),
 						'name'         => 'layouts',
@@ -60,6 +66,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ) {
 						),
 					),
 				),
+				'position'              => 'acf_after_title',
 				'label_placement'       => 'top',
 				'instruction_placement' => 'label',
 				'active'                => true,

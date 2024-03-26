@@ -18,6 +18,10 @@ if ( class_exists( 'FacetWP' ) ) {
 	require 'includes/facets.php';
 }
 
+if ( class_exists( 'SearchWP' ) ) {
+	require 'includes/searchwp.php';
+}
+
 if ( class_exists( 'WPSEO_Options' ) ) {
 	require 'includes/yoast.php';
 }

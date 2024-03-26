@@ -122,3 +122,47 @@ function toms_gla_add_to_cart() {
 	}
 }
 add_action( 'template_redirect', 'toms_gla_add_to_cart' );
+
+function toms_account_wishlist_tab( $menu_items ) {
+	$menu_items = array_slice( $menu_items, 0, 2, true ) +
+		array( 'wishlist' => __( 'Wishlist', 'toms' ) ) +
+		array_slice( $menu_items, 2, null, true );
+	return $menu_items;
+}
+add_filter( 'woocommerce_account_menu_items', 'toms_account_wishlist_tab', 10, 1 );
+
+function toms_wishlist_tab_content() {
+	get_template_part( 'template-parts/account-wishlist-tab' );
+}
+add_action( 'woocommerce_account_wishlist_endpoint', 'toms_wishlist_tab_content' );
+
+function toms_add_wishlist_endpoint() {
+	add_rewrite_endpoint( 'wishlist', EP_PAGES ); // 'wishlist' is the endpoint slug
+}
+add_action( 'init', 'toms_add_wishlist_endpoint' );
+
+add_action( 'wp_ajax_add_to_wishlist', 'toms_add_to_wishlist_ajax' );
+add_action( 'wp_ajax_nopriv_add_to_wishlist', 'toms_add_to_wishlist_ajax' );
+
+function toms_add_to_wishlist_ajax() {
+	if ( isset( $_POST['product_id'] ) ) {
+		$product_id = $_POST['product_id'];
+		toms_add_to_wishlist( $product_id );
+		wp_send_json_success( 'Product added to wishlist successfully.' );
+	} else {
+		wp_send_json_error( 'Error: Product ID is missing.' );
+	}
+}
+
+add_action( 'wp_ajax_remove_from_wishlist', 'toms_remove_from_wishlist_ajax' );
+add_action( 'wp_ajax_nopriv_remove_from_wishlist', 'toms_remove_from_wishlist_ajax' );
+
+function toms_remove_from_wishlist_ajax() {
+	if ( isset( $_POST['product_id'] ) ) {
+		$product_id = $_POST['product_id'];
+		toms_remove_from_wishlist( $product_id );
+		wp_send_json_success( 'Product removed from wishlist successfully.' );
+	} else {
+		wp_send_json_error( 'Error: Product ID is missing.' );
+	}
+}

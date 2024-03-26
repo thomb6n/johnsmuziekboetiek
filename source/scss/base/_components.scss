@@ -66,6 +66,11 @@ a {
 .date-meta {
 	color: $color-primary;
 	font-size: $font-size-body-small;
+
+	a {
+		font-size: $font-size-body-small;
+		text-decoration: underline;
+	}
 }
 
 .category-tag {

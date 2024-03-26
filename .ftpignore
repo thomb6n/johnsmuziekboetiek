@@ -6,3 +6,11 @@ vendor/
 webpack.config.js/
 readme.md
 toms-backup-*.pot
+.eslintrc.js
+webpack.config.js
+layouts/**/*.scss
+.editorconfig
+.scss-lint.yml
+composer.json
+composer.lock
+readme.md

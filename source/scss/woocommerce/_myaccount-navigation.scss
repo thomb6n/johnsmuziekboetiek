@@ -28,6 +28,12 @@
 				}
 			}
 
+			&.woocommerce-MyAccount-navigation-link--wishlist {
+				a::before {
+					content: '\f004';
+				}
+			}
+
 			&.woocommerce-MyAccount-navigation-link--orders {
 				a::before {
 					content: '\f218';

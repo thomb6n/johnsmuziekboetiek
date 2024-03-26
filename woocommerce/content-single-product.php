@@ -28,6 +28,7 @@ $product_spotify_embed  = get_field( 'product-spotify-embed', $product->get_id()
 $product_youtube_videos = get_field( 'product-youtube-videos', $product->get_id() );
 $categories             = get_the_terms( $product->get_id(), 'product_cat' );
 $gtin                   = $product->get_meta( '_wc_gla_gtin' );
+$wishlist               = toms_get_wishlist();
 
 $in_cart = false;
 if ( in_array( $product->get_id(), array_column( WC()->cart->get_cart(), 'product_id' ), true ) ) {
@@ -91,18 +92,38 @@ if ( post_password_required() ) {
 						</a>
 						<?php
 					} else {
-						if ( 'outofstock' === $product->get_stock_status() ) {
-							?>
-							<p class="out-of-stock"><?php _e( 'Out of stock', 'toms' ); ?></p>
-							<p class="info-notice"><a href="<?php echo get_bloginfo( 'wpurl' ) . '/product-aanvragen/'; ?>"><?php _e( 'We\'re sorry, this item is currently not available. Would you like to be notified when it\'s back in stock?', 'toms' ); ?> <i class="fa-solid fa-arrow-right"></i></a></p>
+						?>
+						<div class="buttons-wrapper">
 							<?php
-						} else {
+							if ( 'outofstock' === $product->get_stock_status() ) {
+								?>
+								<p class="out-of-stock"><?php _e( 'Out of stock', 'toms' ); ?></p>
+								<p class="info-notice"><a href="<?php echo get_bloginfo( 'wpurl' ) . '/product-aanvragen/'; ?>"><?php _e( 'We\'re sorry, this item is currently not available. Would you like to be notified when it\'s back in stock?', 'toms' ); ?> <i class="fa-solid fa-arrow-right"></i></a></p>
+								<?php
+							} else {
+								?>
+								<a href="<?php echo $product->add_to_cart_url(); ?>" class="button add-to-cart">
+									<?php _e( 'Add to cart', 'toms' ); ?>
+								</a>
+								<?php
+							}
+
+							if ( $wishlist && in_array( get_the_ID(), $wishlist, false ) ) {
+								?>
+								<button class="button remove-from-wishlist" data-product-id="<?php echo get_the_ID(); ?>">
+									<?php _e( 'Remove from wishlist', 'toms' ); ?>
+								</button>
+								<?php
+							} else {
+								?>
+								<button class="button add-to-wishlist" data-product-id="<?php echo get_the_ID(); ?>">
+									<?php _e( 'Add to wishlist', 'toms' ); ?>
+								</button>
+								<?php
+							}
 							?>
-							<a href="<?php echo $product->add_to_cart_url(); ?>" class="button add-to-cart">
-								<?php _e( 'Add to cart', 'toms' ); ?>
-							</a>
-							<?php
-						}
+						</div>
+						<?php
 					}
 					?>
 					<div class="categories">

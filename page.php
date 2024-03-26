@@ -12,7 +12,7 @@ if ( have_posts() ) {
 					the_row();
 					get_template_part( 'layouts/' . get_row_layout() . '/' . get_row_layout() );
 				}
-			}	
+			}
 		}
 	}
 }

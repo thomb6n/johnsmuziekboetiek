@@ -56,6 +56,12 @@
 									<?php _e( 'Account', 'toms' ); ?>
 								</span>
 							</a>
+							<a class="wishlist-icon" href="<?php echo wc_get_account_endpoint_url( 'wishlist' ); ?>">
+								<i class="fa-regular fa-heart"></i>
+								<span class="screen-reader-text">
+									<?php _e( 'Wishlist', 'toms' ); ?>
+								</span>
+							</a>
 							<a class="cart-icon" href="<?php echo wc_get_cart_url(); ?>">
 								<i class="fa-regular fa-shopping-cart"></i>
 								<?php

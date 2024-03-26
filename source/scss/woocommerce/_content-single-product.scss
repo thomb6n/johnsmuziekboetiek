@@ -101,6 +101,16 @@
 				}
 			}
 
+			.buttons-wrapper {
+				display: flex;
+				gap: 0.5rem;
+				flex-direction: column;
+
+				@include medium {
+					flex-direction: row;
+				}
+			}
+
 			.add-to-cart,
 			.view-cart {
 				background-color: $color-secondary;
@@ -117,6 +127,38 @@
 					font-family: $icons;
 					content: '\f217';
 					margin-right: 0.5rem;
+				}
+			}
+
+			.add-to-wishlist {
+				&::before {
+					font-family: $icons;
+					content: '\e500';
+					margin-right: 0.5rem;
+				}
+
+				&:hover {
+					text-decoration: none;
+
+					&::before {
+						font-weight: 700;
+					}
+				}
+			}
+
+			.remove-from-wishlist {
+				&::before {
+					font-family: $icons;
+					content: '\e4ff';
+					margin-right: 0.5rem;
+				}
+
+				&:hover {
+					text-decoration: none;
+
+					&::before {
+						font-weight: 700;
+					}
 				}
 			}
 

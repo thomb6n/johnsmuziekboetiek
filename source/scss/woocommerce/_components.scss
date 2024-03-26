@@ -147,3 +147,43 @@
 		@extend .button;
 	}
 }
+
+.wishlist-table {
+	width: 100%;
+
+	.product-image {
+		img {
+			border-radius: $border-radius;
+			height: 60px;
+			width: 60px;
+			margin-right: 1rem;
+		}
+	}
+
+	.product-name {
+		padding-right: 1rem;
+	}
+
+	td,
+	th {
+		text-align: left;
+	}
+
+	.remove-from-wishlist {
+		padding: 0.5rem !important;
+
+		&::before {
+			font-family: $icons;
+			content: '\e4ff';
+		}
+
+		&:hover {
+			text-decoration: none !important;
+
+			&::before {
+				font-weight: 700;
+				text-decoration: none;
+			}
+		}
+	}
+}

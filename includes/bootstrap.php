@@ -65,6 +65,8 @@ function toms_load_assets() {
 	wp_enqueue_style( 'toms-style-vendor', get_bloginfo( 'stylesheet_directory' ) . '/dist/vendor.css', array(), false );
 	wp_enqueue_script( 'toms-script-main', get_bloginfo( 'stylesheet_directory' ) . '/dist/main.js', array(), false, true );
 	wp_enqueue_script( 'toms-script-vendor', get_bloginfo( 'stylesheet_directory' ) . '/dist/vendor.js', array(), false, true );
+
+	wp_localize_script( 'toms-script-main', 'toms', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 }
 add_action( 'wp_enqueue_scripts', 'toms_load_assets' );
 
